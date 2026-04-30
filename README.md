@@ -8,6 +8,9 @@ Warsztaty w ramach Funduszu Zdolni (30 kwietnia - 2 maja 2026).
   - [Dyskusja na Hacker News](https://news.ycombinator.com/item?id=47202708)
   - [MicroGPT - Growing SWE](https://growingswe.com/blog/microgpt)
 - [Nanochat](https://github.com/karpathy/nanochat)
+- [nanoGPT](https://github.com/karpathy/nanoGPT) - na nim oparte są Notebooki 4 i 5
+- [Let's build GPT: from scratch, in code, spelled out (YouTube)](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+- [Attention Is All You Need (Vaswani i in., 2017)](https://arxiv.org/abs/1706.03762)
 - [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/en/chapter1/4)
 - [GuppyLM](https://github.com/arman-bd/guppylm)
 - [Thinking in tensors, writing in PyTorch](https://github.com/stared/thinking-in-tensors-writing-in-pytorch)
