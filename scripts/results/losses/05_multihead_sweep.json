@@ -1,0 +1,112 @@
+[
+  {
+    "block_size": 32,
+    "n_embd": 64,
+    "n_head": 4,
+    "n_layer": 2,
+    "n_params": 113886,
+    "final_train": 1.8224742412567139,
+    "final_val": 1.9250690937042236,
+    "best_val": 1.9250690937042236,
+    "time_s": 74.476389169693
+  },
+  {
+    "block_size": 32,
+    "n_embd": 64,
+    "n_head": 4,
+    "n_layer": 4,
+    "n_params": 213470,
+    "final_train": 2.070242404937744,
+    "final_val": 2.1540260314941406,
+    "best_val": 2.1526927947998047,
+    "time_s": 142.79544496536255
+  },
+  {
+    "block_size": 64,
+    "n_embd": 64,
+    "n_head": 4,
+    "n_layer": 2,
+    "n_params": 115934,
+    "final_train": 1.7257245779037476,
+    "final_val": 1.8864758014678955,
+    "best_val": 1.8794647455215454,
+    "time_s": 122.25805687904358
+  },
+  {
+    "block_size": 64,
+    "n_embd": 64,
+    "n_head": 4,
+    "n_layer": 4,
+    "n_params": 215518,
+    "final_train": 2.0992836952209473,
+    "final_val": 2.1610465049743652,
+    "best_val": 2.1610465049743652,
+    "time_s": 243.66526293754578
+  },
+  {
+    "block_size": 64,
+    "n_embd": 96,
+    "n_head": 4,
+    "n_layer": 4,
+    "n_params": 470686,
+    "final_train": 1.9267771244049072,
+    "final_val": 2.02056884765625,
+    "best_val": 2.02056884765625,
+    "time_s": 362.23016119003296
+  },
+  {
+    "block_size": 64,
+    "n_embd": 96,
+    "n_head": 4,
+    "n_layer": 6,
+    "n_params": 693790,
+    "final_train": 1.797358751296997,
+    "final_val": 1.92740797996521,
+    "best_val": 1.917854905128479,
+    "time_s": 909.8564937114716
+  },
+  {
+    "block_size": 128,
+    "n_embd": 96,
+    "n_head": 4,
+    "n_layer": 4,
+    "n_params": 476830,
+    "final_train": 2.0106008052825928,
+    "final_val": 2.066772699356079,
+    "best_val": 2.066772699356079,
+    "time_s": 867.3186638355255
+  },
+  {
+    "block_size": 128,
+    "n_embd": 128,
+    "n_head": 4,
+    "n_layer": 4,
+    "n_params": 832350,
+    "final_train": 1.8550503253936768,
+    "final_val": 1.9691989421844482,
+    "best_val": 1.9691989421844482,
+    "time_s": 888.7006220817566
+  },
+  {
+    "block_size": 128,
+    "n_embd": 128,
+    "n_head": 4,
+    "n_layer": 6,
+    "n_params": 1228126,
+    "final_train": 1.6387933492660522,
+    "final_val": 1.8056892156600952,
+    "best_val": 1.8056892156600952,
+    "time_s": 1813.5639851093292
+  },
+  {
+    "block_size": 128,
+    "n_embd": 192,
+    "n_head": 6,
+    "n_layer": 6,
+    "n_params": 2726878,
+    "final_train": 1.4321510791778564,
+    "final_val": 1.7370948791503906,
+    "best_val": 1.728634238243103,
+    "time_s": 2731.120702981949
+  }
+]

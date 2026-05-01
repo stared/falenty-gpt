@@ -1,0 +1,60 @@
+# 01_markov_n1
+
+## hyperparams
+```
+{
+  "state_size": 1,
+  "alpha": 0.1
+}
+```
+
+## extra
+```
+{
+  "n_states": 92,
+  "avg_continuations": 17.565217391304348,
+  "eval_time_s": 0.23974037170410156
+}
+```
+
+## final losses
+- train: 2.5474
+- val: 2.5684
+
+## sample [Litwo]
+```
+Litwo, ojczyzno mojan gimię m dra! pier wodał.
+ wiurwą, wić sa,
+
+Be, kiabówi.
+A — przy  ja, waro» gie, ze — Pa rze kżeśw szianaje».
+Lewy! patoto
+Gałyte wz natw niać durchłoje dnia,
+Plut,
+Pi zierza makrzę m. dakichybyj — ść.
+Led kł!«Kość siczienanią ódania zanielię siem,
+Sciżę dkąć:
+Aszlęd waróga piem rejątaja
+Tobuki Juziów aczywy e ty: bzyśwy skąprzby wy wicza chuż-kiłbódł ł!
+Je? odwar zimnie skiądledocedłozlek
+Donie
+```
+
+## sample [blank]
+```
+ naków.
+Modzwo:
+
+Cow miaru,  tw m «Na. noręczylierwynia.
+Tem!
+Dodu dzschch mykrzy,
+I wórzie do jni, an li rak kaczenta  pścotrzą  bary szano wą  jną, Jem tyk żododrowsiłowoimórziedzbytał nie wa, jądk z stwopow dzdwiedzem fa!
+Ni;
+Ktę;
+ ch  obębrać wiegd ziwi ra piś trzalegężaniną dy ca
+Krnarzemystróstrów chone sząci  m,
+ łukę… gatnię pok kieskoczyjeaczejęduch.
+Prcię, Wąch po — nazimiczę połać.
+Tewiw
+```
+

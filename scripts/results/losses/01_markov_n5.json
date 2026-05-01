@@ -1,0 +1,25 @@
+{
+  "name": "01_markov_n5",
+  "hyperparams": {
+    "state_size": 5,
+    "alpha": 0.1
+  },
+  "iters": [
+    0
+  ],
+  "train_losses": [
+    1.8106651898304433
+  ],
+  "val_losses": [
+    2.6957707625182747
+  ],
+  "samples": {
+    "Litwo": "Litwo, ojczyzno moja, po tyby sZastukać;\nSędzia — przeczność liców, przyśpieszy.\nBo wszędzie książki różne stuknie, ja w Peterburku, *borowi tylko grZatem jeden czarny tźli jak i Suwarów jego same obiedny, w talent w las by je własnego klć o jZastukanie chcę wypędził,\nDrugi, równi zwyczaj honorowym, sam nieraz się z nią ledwie wspomina i rzeczy)\nWiadomo zakładać głów strumieniło wróżbą ratować!!\nWszystko zrobiłem, ws",
+    "blank": "           Trzecież szlachtą Moskala, tam w strzegłem — zver5-9\n\n\n\n\nKsięga dzieja, który dniem okryte chłopca przeżyć długo».\n\n    «Telimena, znBartłomieniu.\n\n    Wojski panie,\nPrawda! prawie niewielkich piały i to książki; wsępny ciemno wazę, cukie12\n\nWróżby swej tabaki i Bernardyna trwogą nagłym wszystkich lasów.\n\n    Zosi, dym i strumieni.\nDomowemu to pamiątce: więc szedłszy, zmienie.\n\n    Po chwały"
+  },
+  "extra": {
+    "n_states": 127360,
+    "avg_continuations": 1.6534783291457287,
+    "eval_time_s": 0.254500150680542
+  }
+}

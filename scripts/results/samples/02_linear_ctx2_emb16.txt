@@ -1,0 +1,48 @@
+# 02_linear_ctx2_emb16
+
+## hyperparams
+```
+{
+  "context_size": 2,
+  "embedding_dim": 16,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 4606
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 9.021569013595581,
+  "best_val": 2.4291577339172363
+}
+```
+
+## final losses
+- train: 2.4261
+- val: 2.4557
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojakać, tem, się szerzy kam, Udymiewnałaka
+Szboróż wycie ch.
+Pogeją nie droby darzeją  poczór gi.
+
+
+Nak j kieroda ząca z toługrym, cząbażwyznamią ści, lbonićbatekom a na  ni Horwywiegtez,ma tram niałałemianny;
+Tedzym Stakam  sta.
+
+  ierzywin postu ny c wota Zastorotkie ci.
+
+  rzy jeju Kostywo wa zoć Kr
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojamiszakdzu k trojąc wim ch Stam du szywiegłote trzynkie  o symim zły sięłógo, wiele monę towie na, dem i   rak Regroltwie w dustenie bona i s szyczyśliczy prota; jakło wejuże z o szy doć bałuby z pobiej mowsię dać wa my lusić przym obrobie dmich na go sięcy dzegu,
+Jak wie;
+I z ko sza  dawi ka, wsię c
+```
+

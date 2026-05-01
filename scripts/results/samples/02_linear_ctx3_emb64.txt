@@ -1,0 +1,49 @@
+# 02_linear_ctx3_emb64
+
+## hyperparams
+```
+{
+  "context_size": 3,
+  "embedding_dim": 64,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 24158
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 9.832818984985352,
+  "best_val": 2.385812282562256
+}
+```
+
+## final losses
+- train: 2.3664
+- val: 2.4258
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja.
+Roda ząca ż tył wsem, czuba,
+Macimiąłagnąłebszićbytakom a j k ni Here wież zy,ma tramnałaże,
+Chadnie k daje Sędzam  sta:
+Je lawerzin posta ny z woła Zastyrotkie ci o warzybękodząc: żyś ja zoć!
+Myćszaki robytrojąc wim chałtam
+Du ra wynał: «Ja, czkię  odzymimłuły, i łógnę wi Sem onęk wadziak, jeż ni
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja  rokie wa liwasta duszenie bow zi roszy świe cza przy,
+Że zem oł wieli koszy doć,
+I zate  pod wo mowsię na dzi wyklecić przym obrodki rękiędniego sięcy  magu,
+Jak wie;
+I z ko przy — wz ka szkręczyłać u Talec zegł.
+Skarzy — rzałeszczobie bit w cię, żedo pole;
+Choć Ponie,
+Dodonie podła na się ka taby
+```
+

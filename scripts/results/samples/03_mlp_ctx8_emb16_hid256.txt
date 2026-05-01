@@ -1,0 +1,50 @@
+# 03_mlp_ctx8_emb16_hid256
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 16,
+  "hidden_dim": 256,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 58686
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 15.092532873153687,
+  "best_val": 2.0597453117370605
+}
+```
+
+## final losses
+- train: 1.9299
+- val: 2.1202
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojadnie siszedł podsty dołazkiemne wyrku
+Nie phłędna na Lecz leżyty kuącę pył przyniem, że sody:
+Już znowu nagrzie śrzył wróciły słowa!
+
+    Takość szporano
+Pustęki, jako radzić,
+Zgodzów, mówić uchu,») mudy, jni przyprałę, na parter kik. Rzekł: «Nieszkał, powilił
+Jąciłesy, przy zbrącą i truczyłą jni wi
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja w puszczę: miesz jego cieraty,
+Lecz wieczać, w drugich strzeczne dogrody do śródką wchą przyjacie, postrożny
+Przy przyjaskich,, był oczymać,
+Nie wydobył z pernerdyna włosław głowie, ziadał, chy przewskich, godno dobrze, w ucierza,
+W sam zającki,
+Płuszanie,
+Wkonowie za przyże pod warki, czy kocnaczy
+```
+

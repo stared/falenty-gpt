@@ -1,0 +1,101 @@
+[
+  {
+    "context_size": 1,
+    "embedding_dim": 16,
+    "n_params": 3102,
+    "final_train": 2.5687530040740967,
+    "final_val": 2.638561725616455,
+    "best_val": 2.561967372894287,
+    "time_s": 9.10295581817627
+  },
+  {
+    "context_size": 2,
+    "embedding_dim": 16,
+    "n_params": 4606,
+    "final_train": 2.426149845123291,
+    "final_val": 2.455718517303467,
+    "best_val": 2.4291577339172363,
+    "time_s": 9.021569013595581
+  },
+  {
+    "context_size": 3,
+    "embedding_dim": 16,
+    "n_params": 6110,
+    "final_train": 2.3755946159362793,
+    "final_val": 2.495846748352051,
+    "best_val": 2.4422996044158936,
+    "time_s": 9.08959698677063
+  },
+  {
+    "context_size": 5,
+    "embedding_dim": 16,
+    "n_params": 9118,
+    "final_train": 2.3658370971679688,
+    "final_val": 2.418198347091675,
+    "best_val": 2.418198347091675,
+    "time_s": 9.17305302619934
+  },
+  {
+    "context_size": 8,
+    "embedding_dim": 16,
+    "n_params": 13630,
+    "final_train": 2.411647081375122,
+    "final_val": 2.4365968704223633,
+    "best_val": 2.426647186279297,
+    "time_s": 9.52308988571167
+  },
+  {
+    "context_size": 16,
+    "embedding_dim": 16,
+    "n_params": 25662,
+    "final_train": 2.3478944301605225,
+    "final_val": 2.4703826904296875,
+    "best_val": 2.421417474746704,
+    "time_s": 10.045413255691528
+  },
+  {
+    "context_size": 3,
+    "embedding_dim": 8,
+    "n_params": 3102,
+    "final_train": 2.46174693107605,
+    "final_val": 2.5845580101013184,
+    "best_val": 2.5172905921936035,
+    "time_s": 9.037189722061157
+  },
+  {
+    "context_size": 3,
+    "embedding_dim": 32,
+    "n_params": 12126,
+    "final_train": 2.3901572227478027,
+    "final_val": 2.4217984676361084,
+    "best_val": 2.4092423915863037,
+    "time_s": 9.40553903579712
+  },
+  {
+    "context_size": 3,
+    "embedding_dim": 64,
+    "n_params": 24158,
+    "final_train": 2.366384506225586,
+    "final_val": 2.4258131980895996,
+    "best_val": 2.385812282562256,
+    "time_s": 9.832818984985352
+  },
+  {
+    "context_size": 8,
+    "embedding_dim": 32,
+    "n_params": 27166,
+    "final_train": 2.3608603477478027,
+    "final_val": 2.4480068683624268,
+    "best_val": 2.3824894428253174,
+    "time_s": 10.051674842834473
+  },
+  {
+    "context_size": 8,
+    "embedding_dim": 64,
+    "n_params": 54238,
+    "final_train": 2.3193399906158447,
+    "final_val": 2.4057273864746094,
+    "best_val": 2.3881845474243164,
+    "time_s": 11.657664060592651
+  }
+]

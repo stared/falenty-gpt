@@ -1,0 +1,51 @@
+# 03_mlp_ctx8_emb8_hid128
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 8,
+  "hidden_dim": 128,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 21198
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 13.031737089157104,
+  "best_val": 2.1807258129119873
+}
+```
+
+## final losses
+- train: 2.1089
+- val: 2.1807
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja, dwór marwola z śakiaż ra bół ciły chłów skoziesów grzeboni trów nubit ponfan, córam odrowę:
+Gdziwarzy sz Jatwie! już jąk le mówieszłąc okon,
+Którym trzykę zając żya do u kam lorany wymionym księgn mu rzeczyć!» — koz madał,
+
+     Brzucił swoje wstawić adził sied,
+Przyża zosturci. w stał chmów Lecki
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojaknąc już malewy mad krobu przestał się dakale.
+Tadeusz wskaty siedś niebie kosta z przeraza był niech;
+Z okr okrychu,
+Ma do mam się a grobi w kapiegry
+Uziłać się bracił rumienie!
+A kom wrów się czokanie
+Mak le ważąd szleki
+Wspieręście,
+Jak Stawieru na przeszach mylkaka,
+Bry Pan spochowie wszeliwszał
+```
+

@@ -1,0 +1,70 @@
+# 05_minigpt_b32_e64_h4_l2
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 64,
+  "n_head": 4,
+  "n_layer": 2,
+  "dropout": 0.0,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 113886
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 74.476389169693,
+  "best_val": 1.9250690937042236
+}
+```
+
+## final losses
+- train: 1.8225
+- val: 1.9251
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojaciel kołu!
+Stąd ptaków od najprotów o gitanee jak w rące,
+Jako był cekawiał pa. W patrz po podostochnie:
+«Nią wiechów kiedy — choć — «Nie to piebany maczę,
+Ale dostaki hięstwa to ciek jenerał;
+hyrwał obwiadł gryzwę. Strwa pochwszelóch że najgody
+Aszmyk politek — pójdźmi, dwa sam pałku ze był całowy:
+Bo drzewiki, w koich. Oglądła szywa, albo sam zabietnę gwiózegowił
+Wymyślił co się dziedzika z głowe pochwał,
+Dwie lekch i już panuć są potopierj głowy».
+
+     On »Utąt kich gwam, jak poddługo się ja
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja krzywy,
+Bucham niebezpierwszy na pocienko z natunki,
+Jako do drzwi domumykiem i z cosił polemena.
+Przecież się nad do siebie chwili fura.
+Ja to bernardyn takiemnie jutr już w bić wielkich karanka w starzy
+Wielkawości się z księży, co się przez Horeszkomował usiąt coru.
+Podobiec gałą obrona o bwiadł niej się wielkichnęła jego przez swe swatni z wielkiej kochany,
+Co się jak do panboki bernardyna z sów stałtego się rozwach jeszcze pomieszy.
+Zatak to konienka jest bez pitłumki szła się trono biegał
+```
+
+## sample [Soplica_T0.8]
+```
+Soplicami oczy
+I szefa kurkę potężnie trzeba znowu koła,
+Zba Sopliców godził je psarze,
+Telimeny! je Wierzemi wazy z potem, potem,
+Teraz goń wstawił i na siedli. Skronie bez jest rozmowały.
+Teraz dobrzyn uroda, że na polaków Jaciel wszystki usłuchne wszystko fijuszy nie z przez jej tułniej i to zwierzanka bukłoniłodzi w kochantów!
+A była się blaską łopies kijami pobiemuskie!
+Staną na jakobił lubi w rodow
+```
+

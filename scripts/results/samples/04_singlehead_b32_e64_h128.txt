@@ -1,0 +1,51 @@
+# 04_singlehead_b32_e64_h128
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 64,
+  "head_size": 128,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 44766
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 19.499696969985962,
+  "best_val": 2.481774091720581
+}
+```
+
+## final losses
+- train: 2.4548
+- val: 2.5200
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojae jmoni tro uścierzidojae,
+I zabyliesi,
+ rotrzy. Powedogłosieć,
+Nach oz  «Zan bakliydra mdronię, w «
+Wsiem sz Wid norza tr siwannywsza swył, rze  plitewiłe,
+Moczano gaga, m zodwą męd, jele bilecienycólice,
+Pternustowi k norze b wdały mie.
+
+A wiem, Jucz ta odwna zrozwyło rozgadzią roci; chli oniem srozychobczanie sim goddały.
+Wciejsko dzczekieszniem, wi tą gście ni*szerze!» 
+Prurzet — tradze: łóźli
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja mna ochw szymie rzem wi, rzie done po mielna mi skarzem.
+Barzykamię, oprzy kasnarze w łonieni iawozcze  ziczy w wym mo tałom
+  wamiegodru dziawinech natanie,
+ ojezław astawi wie nigrowie wam siedzyci;
+ Hbabroz ju wo trzkacho tuchopszeniesi, sku przyka miegdorzem rusie ni te wi m ku przy znie tam pięk.  Tady  rzy nam  zanie tarcię, brozu ko siem gi a wiedbe z sąc u sie  zna wisady załawiebo, mi sz
+```
+

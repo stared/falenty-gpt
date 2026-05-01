@@ -1,0 +1,57 @@
+# 03_mlp_ctx32_emb32_hid256
+
+## hyperparams
+```
+{
+  "context_size": 32,
+  "embedding_dim": 32,
+  "hidden_dim": 256,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 289566
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 22.470780849456787,
+  "best_val": 2.2715139389038086
+}
+```
+
+## final losses
+- train: 1.8549
+- val: 2.3369
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojaczkają,
+Już sam go bógł sioli wiłają do dwaneg wapoka
+Dmioł gognarno, i znoko
+Zachsi dzawał, znaczasem zgoney.
+
+
+
+
+
+Kłód wiest w zdraz o który z grzeczegi
+Pazalił rnaro, że obrze ukichał słonie;
+Protegi głomen, co zmyt sto przebe dżartedaro cicie:
+Bajękną już jaknem upiąt ospatkiki,
+Znu zlbi nie mnó
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja do już dosie,
+Aseso ręką rą bezmy w szczę padarza,
+Jużeż nie pownice przy. Abierzcem na trzyśla;
+Co się słyszać, jak skocie były słońci wzczystał wszystkie dwóch podobnych ręki
+Dowiekich usierze dwóg be cie mo mi krocie,
+Dobianiejsce z pansach ręki okieć.
+
+    Podkazdem że człoby kupaje kuch kastką
+```
+

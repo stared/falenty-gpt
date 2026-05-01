@@ -1,0 +1,52 @@
+# 02_linear_ctx3_emb16
+
+## hyperparams
+```
+{
+  "context_size": 3,
+  "embedding_dim": 16,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 6110
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 9.08959698677063,
+  "best_val": 2.4422996044158936
+}
+```
+
+## final losses
+- train: 2.3756
+- val: 2.4958
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojak się szerubyśniakie
+Zzywnałaki
+Szie, u zyciłach.
+Po tuż nie.
+
+ by darzeda  poczór pianą szlej kieroda zą szucy
+Zlęsym, ia bażwyzy,
+Bomary, lbonić niekom pysty ni Hrawie, ż zy, pianą;
+Nież łemianny;
+Tedaku Sędzam potrobliem,
+Dawin posta ny c wopawileźnejakieGczrobiarzy k wy Kodtywo siałoć!
+Mieszakdz
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojarzy trojąc wim czyłowikłu sz wie,
+I żem, czkie  o symim zły sięłówię wiele monę  owie no w szę c krzy więcietwie w dustenie brze i s szyczyśliczał
+I ta; Ruże, wejuże w oczy, dodwia:
+Je z pobiej modzi siać na mukuszyć przym obrobie dmiczenie m sięcy szrzu,
+Aża wie;
+I z ko sza  — ku szace ręczałać pod
+```
+

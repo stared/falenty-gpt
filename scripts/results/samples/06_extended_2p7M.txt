@@ -1,0 +1,100 @@
+# 06_extended_2p7M
+
+## hyperparams
+```
+{
+  "block_size": 128,
+  "n_embd": 192,
+  "n_head": 6,
+  "n_layer": 6,
+  "dropout": 0.1,
+  "lr": 0.0003,
+  "batch_size": 32,
+  "max_iters": 10000,
+  "n_params": 2726878
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 4535.689404010773,
+  "best_val": 1.741400957107544
+}
+```
+
+## final losses
+- train: 1.2030
+- val: 1.7520
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja drugi.
+Je nie był go wróble naszą obszczęty,
+Krwią i jak z cuga dzwon Sakiem dostały,
+Odparłszy do skutku, takąwszy wzgląd do nich Wojski.
+W Aoniec już nas zjawił się chwał się nad rozmową,
+I jeszcze zawsze się z przodu jakby w domu.
+
+    Do zawiesz przy nim swoich domu zgromadzenie.
+Ostróżny trzykroć od ust to wielkiego nogami,
+A w polu ukazał skargy bujać i stuki.
+
+    W tatykich stary płamiętą deszkole dlintą.
+Tam dawni procesów nim nie corgi przy zważa;
+Bo znam cnudzić; najpiękniejszej anikowie!»
+
+    «Ekonom został Maciek, a tylko nie działo,
+Nie dziwa iskopoląc zrobiła! Jenadali.
+Przyzn
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja siedzą?
+Możem jej zapomniać wyprawy ludzki,
+Jeśli kozyka, w galop jedynek mówił,
+My albo czy wielki z tych lekkim wracać się do młody.
+Nie tak przysięgami pomnieć w pomród zwrócił,
+Tyle się z Podkomorzy, po co tym rozdziela
+Dwa starych jest mam i z miejscem twojej nie mała,
+Z wóz sztuką brama na koniec stał podskarnie,
+Który często za dni panem na ściany wiecie;
+I zaczął wielkich zapala na wyraz się zwrócił,
+Na jak nieszczęściem, i masło nas przeszli na dziecinne,
+I z kim podniesionymi strażą krzycząc, pod który
+Pono słychać było także szczęście przyjacielem.
+Tylko słysząc, że go nie jedna tr
+```
+
+## sample [Soplica_T0.8]
+```
+Soplicami, w nim wywiecie,
+Jadąc Hrabia, już na koniec progu.
+Stają z niewolny na dziedzic w nim takiej pociecie,
+Jeżeli kocham dobra, kto chybie się chciał
+Na włoście rozprawiać i wszystkie powiadać.
+Czy też, jakeś dochodzą się uciekać,
+Czy jej strzelców; dzieciństwa była we mgłości
+Dla dostatuje, czyli na stoją kraju,
+Z szkodą weszłe legkać i wielka był duchy
+Z Wilnie wyszedł książę ręce z okolicy.
+
+  
+```
+
+## sample [Telimena_T0.8]
+```
+Telimena wielka zawierząt tego czułek;
+Odkryły się nam wsiadałem nabiłe
+I mógłbyś, jako się może stojące
+I po dwór miałem jak gromady na wiecie.
+Trzeba — odwrócił na siebie: ja jenerał
+Chciałem od dziedziczny od słońca do domu pana».
+
+    Starsza coraz nie Hrabia, gadać wyjdź do kłany;
+Wiem, że to jest w szkoda nie mogląda z dołu,
+I nas nie waszeć trzeba nasze, grzmiano upadło;
+Malej co myśliłem… wszyscy 
+```
+

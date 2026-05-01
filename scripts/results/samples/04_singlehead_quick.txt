@@ -1,0 +1,46 @@
+# 04_singlehead_quick
+
+## hyperparams
+```
+{
+  "block_size": 16,
+  "n_embd": 32,
+  "head_size": 32,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 1500,
+  "n_params": 9694
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 5.125102996826172,
+  "best_val": 2.5299177169799805
+}
+```
+
+## final losses
+- train: 2.5162
+- val: 2.5420
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja na rę lak ninej wia poda krelbylie trosła!» jakto rziamnę, w namiciame wierwodwysi c sckać że bnty  nniów bapich nie zda  tukukusite znoporys oj koży wę dziłem, ja o bonierzk pan kliem, zu ronodby
+Ktwo! kwskodzneniez wołoła iła zepapuidu
+A Rybadrot c, śwny ić  tał ziłeru, nalece w szecył, koję Hrszwał.
+ Kniegł szek li lę!
+I bieszło jeki, jad Zotyść.   Bię.
+O   toniem skoczch Czylik taś zęcym, nap
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojał, wiednenięcznicie waroch, o zie odmie pod w pię sko rzę zilech pobię side j dwieniolcze stery, widzy zę i sze ta ruszię czierzak iato si astewawy, sta sza zcha pienię szic  komi sko nioski dziem waci ja szie niakła,
+Podni kurze t jelach,  wiace ponoki dwiczic, biem perzostokię stem, ku drot kuwi.
+    żad ni dz wy Ju stowidzał dza sto paro  nikała zytięł polię z poc sch byste plierzch,
+Wi,
+Znokię
+```
+

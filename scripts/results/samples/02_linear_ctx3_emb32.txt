@@ -1,0 +1,48 @@
+# 02_linear_ctx3_emb32
+
+## hyperparams
+```
+{
+  "context_size": 3,
+  "embedding_dim": 32,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 12126
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 9.40553903579712,
+  "best_val": 2.4092423915863037
+}
+```
+
+## final losses
+- train: 2.3902
+- val: 2.4218
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja, no cu zyciłach.
+Po trzymie.
+Chczy hrzeda  poczór gi na szlej kieroda zą szucy
+Załsim, ia buż palimocość».
+
+  niebytakom ny s  ni o peli, ż zy,ma drusznie parażannie m daje Sędzam ierwiali mruszwie posta nię,
+Kródem:
+Rodotkie ciedo jak, jej Jące m o wadzoć!
+Mieszardzupidro; wa wim czyłocikłucze wyl
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja,
+Przec, czkiej załymimłuły sięłógnę wiele monę  owielik, dem i   rakiemnie trzego dusienie brzy i rosął zwie cza waje, k modzieczużedziecz ny i wy z by z pod wo mo się na dzlawy,
+Uwić nie m obiadki ręczadniego sięcy  magu,
+Jak wiech dz się z wejaku zarzekręczał
+I podasią  ja i serzesiodziałą sku ta
+```
+

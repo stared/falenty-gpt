@@ -1,0 +1,53 @@
+# 03_mlp_ctx16_emb64_hid256
+
+## hyperparams
+```
+{
+  "context_size": 16,
+  "embedding_dim": 64,
+  "hidden_dim": 256,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 292574
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 22.0015869140625,
+  "best_val": 2.1591241359710693
+}
+```
+
+## final losses
+- train: 1.8180
+- val: 2.1657
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojardy, padł go dwiecjęć wodzą przyzaskalom,
+Jak gnikady po różnie chwili przerwała jako i od mydradzi
+Młodział.
+Się jak porkówkł Jakiem, żóło zwanił rzuki,
+I kończyła ich brzęduje;
+Pest i rytwął wojnowych,
+Za powrócilż kiedziele z zbajach wyprapi!
+
+    Kto na zalagła ża ru nie choczy płótno nad siedzi
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja, że radeusta; tej w sądzieciecz wierz,
+Że i szerlawej szpochta,
+A tym ściernie się w kołoknia,
+I takoż łoty, w bracie, kłzyknęli z wiedzie, że mu podzieł,
+Oceznieszkał z murów,
+
+    Przed stole mo drogiej zabiania się ku, ślada roga.
+
+                                                                
+```
+

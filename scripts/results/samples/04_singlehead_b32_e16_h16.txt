@@ -1,0 +1,51 @@
+# 04_singlehead_b32_e16_h16
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 16,
+  "head_size": 16,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 4382
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 11.981504917144775,
+  "best_val": 2.5908210277557373
+}
+```
+
+## final losses
+- train: 2.5859
+- val: 2.6101
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojatył;
+Z dobiamiłnałoja tow stwybniejaj ałowimomie  ko,
+I znacedwydkuny piaw  pute w  zaceszinasz Z gok ble zy  zyt doz norysz ię, dzi stoli, m;
+I pu nawuzy sko r dakę,
+«Bilk chanię cyć!
+ wiład  żejatdźessza; m kach Wu nene jesiśczy
+Wić,
+Banieme,
+Idachtali wa binł  Czchowstażekrzwudrznieniewnażezałog stw pe,
+Ksko uię Sł wodadopliłoł tnunia isóTezałodozgowa? zelił byczy u.
+
+ przeżestdste w topojszapr
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja grz ste szieco t Szw nał czbaku żnieru  ż ni co Szłam  o — sy ociemylały nyw dzndycz sitamisiełu mie taze uszi ść ie pram dy zakaze stachaw c ny iałoku nieże biki wode koprzenąku w sie jnię, deną zeł zk sta danał strzoro pobiecynie zekienalekie cakuży dziejuczele — bim si, pieja załulie, ociął Z owiedniem w niek że w  przychasziemy brzyju.
+
+Cienonym,
+ zate sk pniebi — ne nie u dogaja n    wiez ne
+```
+

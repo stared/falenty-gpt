@@ -1,0 +1,50 @@
+# 04_singlehead_b64_e64_h64
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 64,
+  "head_size": 64,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 28510
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 22.233419179916382,
+  "best_val": 2.4910457134246826
+}
+```
+
+## final losses
+- train: 2.4531
+- val: 2.4910
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojasurza mi wię  stygartadał opię ra  neięchy czeżeniedy!
+ rgakł
+Żażnie, sz d knanię gon zważ mo okota miarwdmy nieny noży mi si w noni, tęcie brysony pnna podbiej?
+Śmno kny: k waszcz pizeskie.
+
+  Wiład Śczgłoczierdy arwesiść,
+ stacziłtoni szaczybowskówy, sześnaciez sk Jedztyk uskobiłówkł maj łędz ręlsa nomna sim
+Zno rzmasi górwi gode zsz perzegucziczba;
+Płoryszną mojgr wtróc jał wawijoskł;
+Iża docz 
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojaden wie szał:
+Je skóż mnanian sie ż rak mie mch bi ddka dzio wię cie niem nicz się naj nianie rado stora iło jestemie na żym ta zcz wakie niech wie zi, wi giena d si ciłesz siał rz wicarzny kroł rucziłe tko wał chod palaniejstrzy k stomie
+I doc w sktarzyk: sierowsko pronan andzie zlakatraczie,
+Parzy powo czajem, — wyśc poniek, sziwacie,
+Je gi wi wiej, dna wy zadnią sza wia dzamo w wieni zicie piep
+```
+

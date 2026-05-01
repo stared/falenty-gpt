@@ -1,0 +1,57 @@
+# 04_singlehead_b32_e64_h64
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 64,
+  "head_size": 64,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 26462
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 15.697144031524658,
+  "best_val": 2.4777302742004395
+}
+```
+
+## final losses
+- train: 2.4682
+- val: 2.4932
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja
+Morechcie iku.
+Nie mamóro są krzym supnył;
+Kudalkóże ta szyszara rzyżał!».
+«I  Azu.
+Jadźć wieszę! mu żestara, tate tch dłodat szchy, lię nymod ziéj:
+Wo owedni; dzę pocza!
+Chc swato odusął!
+A goprzała:
+I Telkią stać, Po bobro…
+ Gwi   wiestwe wjsposi, jakł,
+Ochocoplen?— sł
+Lestał gasuszkichy kwarażyło, mowają, *
+ mapsierługdobać, siestra, wesutu!
+Juch piknąc pusie.
+Rejec:
+Lce  natamy;
+Zstrznatre że
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja pował szłuch na wiete zięcha,
+Ma dzałychwu sziędałowoskię scho agniece, na się duż porzał kawadza sze ta świ sześci sze daste byskło sziesu, zach welana, m sroć — poz d posój z j ciesiejem
+Kużny knał ta wią szu tącze nyszch Rajew wał iem z wi nietawielem ż pla w pachc powa Pruda niąc wałałota waje sz zokłu ińczy przały okięch  siesieda,
+Że m wnię, użą bowy gopedłu cho pardy klie kna juchrodze kie
+```
+

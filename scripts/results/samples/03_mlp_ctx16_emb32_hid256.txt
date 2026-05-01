@@ -1,0 +1,53 @@
+# 03_mlp_ctx16_emb32_hid256
+
+## hyperparams
+```
+{
+  "context_size": 16,
+  "embedding_dim": 32,
+  "hidden_dim": 256,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 158494
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 18.118140935897827,
+  "best_val": 2.1005313396453857
+}
+```
+
+## final losses
+- train: 1.8569
+- val: 2.2076
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojarzą domnet pusał. 
+    Bała — źrząc Aż cię na zniejsku zają iż młodzić zajuł;
+Witawi dziesi Bałby jakowanie,
+Których darce,
+I myls z nieskom,
+Że każ kolek go doskadł, nim prostum! świata resalą z poraz lątem. Jezd klime!
+Stunach ć podnodku
+A co Wlazłe; z się byjali wstąnka ku Uczaszał jich w strone 
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja do pan Jackarził jadnie,
+I z Soplicowad piecz miejscu niawsię nie się z mnieraju.
+Mgodza znał widzie, w poda zbyła pata
+Ale stranę prosa,
+Jak kraczyk mara się polotnie,
+Tabokie żyłe prawy
+Pokoru,
+W damają z tabakiej rącennic chwili!
+I powatajnie się pole, ogo to znowu, oktrące karturcy
+Prawiaty z b
+```
+

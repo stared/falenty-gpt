@@ -1,0 +1,47 @@
+# 02_linear_ctx16_emb16
+
+## hyperparams
+```
+{
+  "context_size": 16,
+  "embedding_dim": 16,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 25662
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 10.045413255691528,
+  "best_val": 2.421417474746704
+}
+```
+
+## final losses
+- train: 2.3479
+- val: 2.4704
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojabna u toku:
+Mazierubużwyznomichać,
+Wstonić z poją ny 
+  n no pwienie zzkopianą;
+Nie przażannie m daku Sędzam, lędwali mruszwie postują;
+U wrocem: «ŚrotkieGćć. r zakiął wy Kodtywo:
+Żał miżny szardzy wytrojąc wim czychamków le wiegł: «Jakrynki, odziy morzływieniógł, wi Serzyczy wadzu ko draty   raka p
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojacz liwady, bestenie brzyśląc sął zyślicza nieta; jeże m ziużeto o szy dodwiał,
+Że  o b wy mo si sia dwi my lużyć nie m obrowie dmiczen.
+Po siczy  mrzudy a  wiech ma ko sta jemie kary,
+Poratkać kołaską przeiną szrojoczy,
+Oska drzym gtowaczy, żedoła iło zało przejniechonie.
+Mał Hrabie poternie wozechć
+```
+

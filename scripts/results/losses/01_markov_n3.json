@@ -1,0 +1,25 @@
+{
+  "name": "01_markov_n3",
+  "hyperparams": {
+    "state_size": 3,
+    "alpha": 0.1
+  },
+  "iters": [
+    0
+  ],
+  "train_losses": [
+    1.8274385314151924
+  ],
+  "val_losses": [
+    2.074814194934971
+  ],
+  "samples": {
+    "Litwo": "Litwo, ojczyzno mojażeby wiodem, ufaRyków, i Zosiu, twą na na biegli mogłem latał mamy;\nPrzystkie panniknił uczterca ledwielał?\nKtórej służył\nMyśliwszyny\nResz kilkuhaj biego dzierzypominał jak mężczykłość jrzadomu;\nCzy smuchoci pstwo,\nŻe w ogrów zawżdymusz pańszczęści grodzierałowo siód; alko Nie chomym dzie!\nBóg rury i w mocne, objąwszególni.\nTrzystarażą w któw!\nZbyt suknie, ska krzywachu? tery gdy się jak piętajnie",
+    "blank": "        Zosiadły! Kluczny szykła korzy się rzerwej, ścił — a głowiechana».\n«I mgle.\nI nardzo sługim solucy zza niedalekkiej pan ławy; chce, gdy płaszery nic i orzéj!\nJeśle zwi z zarode ichodziś ptaszczęste, miłość spraszeni.\nChce od Ja to jedyną.\nHrabia pan mrokazałej wyścił mąż popiesz, nie, ledwiersiadowy\nŚledziestrzy trum — kręca poprawy,\nJa ował kropiernarczmy że drżawiwski rozkowa w kolowarzniki"
+  },
+  "extra": {
+    "n_states": 12706,
+    "avg_continuations": 4.130961750354164,
+    "eval_time_s": 0.22710394859313965
+  }
+}

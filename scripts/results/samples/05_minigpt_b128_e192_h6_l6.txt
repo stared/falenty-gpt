@@ -1,0 +1,79 @@
+# 05_minigpt_b128_e192_h6_l6
+
+## hyperparams
+```
+{
+  "block_size": 128,
+  "n_embd": 192,
+  "n_head": 6,
+  "n_layer": 6,
+  "dropout": 0.1,
+  "lr": 0.0003,
+  "batch_size": 32,
+  "max_iters": 6000,
+  "n_params": 2726878
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 2731.120702981949,
+  "best_val": 1.728634238243103
+}
+```
+
+## final losses
+- train: 1.4322
+- val: 1.7371
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja wieczaje;
+Z nim jeśli możnym powiecie: niech pośpieszył?»
+
+    Już wygrom z cośmi, za wracać z dala sukniu!
+Nikt będąc między z nim domu w koniach domowyra!
+Bardzo policąc rękami, gdy jak wiasności
+Wesoło żniazie chciałoś się w pole urzędy,
+Że myśląc ci kędy żelazom je w tej roztwiedzieć.
+
+    A wiedziała szczlachta jezorał z lekka;
+Pano o judro galinę była progi:
+Królewaj się opowrokiem, a to rączka szedłum,
+Gdy rzekł, patrzą; żelizu Brzytewka honono».
+
+    O Sędzia Panna: «Pan Tadeusz ty! Ger
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja wszystkie się zbija.
+Aż na Tadeusza, chybiał kwestarz rozmowy,
+I w których ciebie ognisków suwały ramiony.
+Każdem zdaniał na nowa odparły wojnie,
+Uszczuł głowę w pasach szalach na wieczorach;
+A gdy na każdy do nim na spuszcza zachodzić,
+Uwierzając się w oczach i przecież i kłótnię
+Z wesoły z wielkimi do szerokiem osiędza.
+Przecież było w górę trąbiono wyszerzędnik,
+Wszyscy do księdza szeroki jak na pole,
+A widząc do siebie, będących na drugim.
+
+    Cesarz strony w powstał, i trzeba widząc po ra
+```
+
+## sample [Soplica_T0.8]
+```
+Soplicając się, wielki krzyknął,
+Że wiedział na za wpół pogląda w kolanach,
+Przed strasznę myśliwych: «Niech ten mu pana
+Biego!» ksiądz z jednego Sędzia króla,
+Którze pomiędzy i co? krzyknął? Lecz Kupicieluszki!
+Niech winy szlacheckim zgody, przysiadarz,
+Odbył radością do domu obytą na dziedziczy.
+Sławnik wasz trzecie: z wreszcie gajemnej male,
+Sam chciały Wartoczyły po ręku oplachu.
+Zbawiał się dla oku 
+```
+

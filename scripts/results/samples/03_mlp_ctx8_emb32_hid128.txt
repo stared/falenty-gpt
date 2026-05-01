@@ -1,0 +1,47 @@
+# 03_mlp_ctx8_emb32_hid128
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 32,
+  "hidden_dim": 128,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 48030
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 14.181291103363037,
+  "best_val": 2.069575071334839
+}
+```
+
+## final losses
+- train: 1.9406
+- val: 2.1032
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojazie,
+Albo w istwią i stronie.
+Trzeba mu i nanychmowy;
+Osłychtę lejska kartkasz, człopiecersa. — hodu Zasenkwierkopy
+Jako jużdego Szawonych latro się dokoła moście toże dla nie wyło, pozrówklić się nalemnne,
+Just kię gorą.
+Wmoś rzebię na ach Taka tak myślęda kawejsza w kuród postrzejscy rzegł nom zgo
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojanki,
+Dom ręcisz stroknia,
+Albenki z drowa swoje wastają, jak sobie czusku widę moszczęśliwał mówiłem strzebato i wydali się wieźle stale, bież ślicy się dole szach szarwał wa, jak rozy;
+Ołwadził śmierz niesów i szabez zudził, we młabiała podlą może z muszczęsta nie się zwady,
+Patskomież pod wzaka, a
+```
+

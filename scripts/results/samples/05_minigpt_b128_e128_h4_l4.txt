@@ -1,0 +1,76 @@
+# 05_minigpt_b128_e128_h4_l4
+
+## hyperparams
+```
+{
+  "block_size": 128,
+  "n_embd": 128,
+  "n_head": 4,
+  "n_layer": 4,
+  "dropout": 0.1,
+  "lr": 0.0003,
+  "batch_size": 32,
+  "max_iters": 4000,
+  "n_params": 832350
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 888.7006220817566,
+  "best_val": 1.9691989421844482
+}
+```
+
+## final losses
+- train: 1.8551
+- val: 1.9692
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojaja czuci, a łum,
+Gelnowny, że powioru, który nie łapiony
+Bercym w dziwny stolczem dusza, ślasno poleconu.
+
+   Domory zaśpili pracian tej to mnielu tylkaź,
+Tak na tyczassta i Sędzia tylko czaskumi;
+Am nasza zzaczeńca się sopu ziękić; za grodził,
+Jeszczałowych, najdzo dziś, widzą, jako jest hłuci
+Opiance od Hrabiont mrzy aż źrzecz rozsłą panów górugi.
+
+   Kaszego i zbieszeców łz w rozrócy kończał,
+Do ten hazu — wóżdni! Ze zaszu, Robak z przy różno».
+Cito krzas będzie w oczy rusku telczną; przytani
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja przedzie
+Skoczedzie za na wiorak strzyżnia w buchać.
+
+    «Czy szarecz — rzekł — rzystrzenie — rzecz mnosie znaścione,
+O to marte ja w szerca w brzysławszy prawów;
+A się do spojrzyńsku w wycząsnym starzyć radził
+W razesz: «Zakowa — rzekł — wzięce — urmania, wieszkach ranie,
+Jeszcze nad na wycharczył się całem odmienie,
+W skończył nie szerek postanem małem do muję,
+Czy poczy powiwskich wieszczeli sanie w wstawie,
+Ale to staną: «Ja wielkie tych więc Soplicowie
+I wszyscy szepli o w przyjada, ten j
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica
+Nim nasze skilich nie presznocu i drugie najpóchnem:
+Przed Każda pilowszec, rest na możył spojrzaci.
+
+   Tadeusz na Sędzia to wiedział w półkiem,
+Nim stanfartą milczają i śniej wielki nie dreszczy.
+
+   «Bropu — drogijęcie Telimeny — złodzia — ołowa — Teraz urękaz — wierz jeszcze nie miom och strona dalniga;
+Będzy do — krzyknął trzebu, prostumy potorzekł,
+Na tylko dwóch czeli trzeba na stołu posob
+```
+

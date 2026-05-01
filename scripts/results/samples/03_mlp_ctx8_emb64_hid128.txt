@@ -1,0 +1,54 @@
+# 03_mlp_ctx8_emb64_hid128
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 64,
+  "hidden_dim": 128,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 83806
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 15.951491117477417,
+  "best_val": 2.0734646320343018
+}
+```
+
+## final losses
+- train: 1.9022
+- val: 2.0759
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojał.
+My bie ciogi.
+Kyngła nagdąps, Hrabia ko obin banewa drzewów biedziałem nam bladejsku wznowe wołato, nieko jego, wbyteś darabio;
+Tadeusz, przerszad kuczera.
+
+    Zbióżna i jesz pobieta,
+Jegnia,
+
+    Hrabiegrodzna.
+
+  tymchciał poprawszy ne Niem do Proną,
+Dla był pol sapók Nod jążecie odpa, To worz
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja!
+Wieniają na krelnie, co? konej załonny,
+I po raz to krzyknął — te mi dwarpie się dziewać.
+
+    Wiedną z ktomarstwo, a Robaka i domodem z razymość wionej siedzienki do jedy,,
+Aż swą dokrącega w mosły strona porządzym za tworze obrazy,
+Przy przerwszy urzokiem, czy szak Wojski nie odwiedzieść za woje
+```
+

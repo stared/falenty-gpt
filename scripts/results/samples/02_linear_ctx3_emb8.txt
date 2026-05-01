@@ -1,0 +1,47 @@
+# 02_linear_ctx3_emb8
+
+## hyperparams
+```
+{
+  "context_size": 3,
+  "embedding_dim": 8,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 3102
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 9.037189722061157,
+  "best_val": 2.5172905921936035
+}
+```
+
+## final losses
+- train: 2.4617
+- val: 2.5846
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja no zakiam patemiej Poszerzy kokakUzylzy nadzieje no ie wy młach.
+Po tuż mie.
+Talty hok Dalał czóż piaże szlaj kieroda wąna z tołu:
+M pierubażwyzy,
+Bumagrąwebsnićbytakom a j
+W ni Hrów wież zzkopianąm niał,
+Każanny;
+Teda gory
+Dam portuwliemrurzemnocochu nię, woła Zarę;
+Bóżbowczro — pie k wy Kortywo:
+
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja! z kiew zszakdze k trojąc wim ch Stam zu sz wie m ze trzynkia  o sy morzły sięłógnę wi Semien poże w oko drami j pakał wa li cie, dusienie bow zi s szy niedzał i tota; Rozy, je w waże po nydziwy szata ch biej. wię  sdać na mykuszyć praczyły — ki dmiczanie m sięcy  mrzu, ia  wie;
+I z ko sza kimie ka
+```
+

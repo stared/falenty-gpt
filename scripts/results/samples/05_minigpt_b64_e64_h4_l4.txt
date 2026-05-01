@@ -1,0 +1,76 @@
+# 05_minigpt_b64_e64_h4_l4
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 64,
+  "n_head": 4,
+  "n_layer": 4,
+  "dropout": 0.0,
+  "lr": 0.0003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 215518
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 243.66526293754578,
+  "best_val": 2.1610465049743652
+}
+```
+
+## final losses
+- train: 2.0993
+- val: 2.1610
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojarza,
+Ma słoinycy do ślatach Bałamiem słę pod obuby
+Czary kalnęciaczków dBrzłony odalu;
+Wojscza róstoficeś; ci ramucóch skola,
+Zapobe — rzenie jeszczeż, marmera,
+Tam, ten głównot, tak — pościeczę małgany,
+A go prukówy staknię w iz skrzyna pamns — nogwy w Tenajmi;
+I w bajmnijosk zena chale karema, świeczeze.
+
+      Migarostac szapad paszapi najnierznyców,
+Do zdajŻenę i tąscy bedne wioła.
+Wkredami się sieliczent w wognaska,
+Kaski z kichony rana i przeste na że jużęty szlachy,
+Roczy kabu zdarnyją se
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja.
+Którę lada na gładzie ksiąd nastalim żej w podarzem:
+Chwią kłuchadzia wychać na laskowici się dliczowie,
+Let, powieczy za toźrzy zajuczych się opatem?
+Z to starzen sile po przestowa i domu szobie górkomi,
+Jakanier, kofenić walby zna gomi, z casuska:
+I pozmienionie zwóżnema wiedzi baczosiem.
+Nie falcące zakał się Dobie na móg iar gdziem,
+Mołową stacha siedźnie taraz w torę z gosiczem,
+Jaż czysie się szami po miechorza od po na starzerz łodzi,
+Ktozy i czostać dromacem owy mi się zamiał,
+I go się
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica u córcz zaszłałami swecwych brawy się ksiądza,
+A do jak liszną tanka o na bojczoście szerszy,
+Zrędzice zali się czwie zręki warazej:
+To chcianne: Zraga na na wszardze dramią przymiecem
+Co ce zaloda nie znawajew nazdada drada poczysnik,
+Któły i do od Skute z wzeczna owie sarzewuczy,
+Prawy prasłumi z kona lenicie,
+Charę widarz, pody i zewśliczały się wykonka.
+Wiedem go domu ukołszą, Obake tak obrzu
+```
+

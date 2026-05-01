@@ -1,0 +1,56 @@
+# 03_mlp_ctx5_emb16_hid64
+
+## hyperparams
+```
+{
+  "context_size": 5,
+  "embedding_dim": 16,
+  "hidden_dim": 64,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 12798
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 12.106178045272827,
+  "best_val": 2.1835455894470215
+}
+```
+
+## final losses
+- train: 2.1127
+- val: 2.2180
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja; nieshała dwiem?
+Jeką boku,
+gdzielińł
+ — Hrabił żyśli, głosę dziedzietryciu,
+Zomał, caś malą co odnoce, cóżąc mubiena,
+Gdym mejli motrze rubrók, z dziadził z miżadz,
+gd cąc dwieddy przyszamnie? Mystrany!
+Asi zara, Napolę Hrabia,
+Sąsyci zarzasześcina polały,
+Downnaj deszczem zebam, żerej łyko gordaj
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojarzty!» Ochości równie był nie rędzieli o stroniem okał głopiana dziek okorzer kola, jak wyrzecienie,
+Daże,
+A wilek międzieminie,
+Krócz grós okorzy
+Zarów zadził, jednie.
+
+                    «Przelca i takieśni na powyli dobraźno mulaźna z wódział,
+Mod cożenie częścię zami».
+
+    Wodzili
+Przed wstaki
+```
+

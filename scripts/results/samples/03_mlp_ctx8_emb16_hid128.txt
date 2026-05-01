@@ -1,0 +1,49 @@
+# 03_mlp_ctx8_emb16_hid128
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 16,
+  "hidden_dim": 128,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 30142
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 14.854111909866333,
+  "best_val": 2.122131824493408
+}
+```
+
+## final losses
+- train: 2.0450
+- val: 2.1274
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojawdem duwu gwiej już cieść wąpsawem uteględy, zgodził.
+Czy Tomcu czaczysz wybawczał, któłe; ta powskichał. gwie petwy seono, przyją, wiedła kłaś tożnicód kład zieli mysią sów wCzysneczsano, chodzi nogo kęciegu i sodok,
+Nreczy,
+Zędzorzego tukże i dworej!
+Boga, czy nie zważniki:
+Tyli za wesów pojonota
+
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja był chy w kolnica,
+Pon stroną no tromny z tedzieść sygom wstrzyżno widani oknił się kronia na miacze; po nim spadry w goła się jego tękody;
+Telimenie.
+
+    Tak o pópierki przy grodziem powielki tryże.
+Wkrował przyjacie:
+«A się poleżny dytrą w pokniów z sako pótkowem okwionę celka panieniam wielkiem
+```
+

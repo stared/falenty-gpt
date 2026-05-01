@@ -1,0 +1,52 @@
+# 04_singlehead_b32_e64_h32
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 64,
+  "head_size": 32,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 17310
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 14.128498077392578,
+  "best_val": 2.475332260131836
+}
+```
+
+## final losses
+- train: 2.4620
+- val: 2.4931
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja zyweszbierspo powi oć wy odysła.
+
+Wzłyżoma; ziespru,
+Wyłosto powię
+Wabaja, rok wzi, kodwie zwy wodałą gł pość zkuł lie iak, proście prówny dwysiubrzmięłko si młemi
+Motała ni nenienieska w knod przył sku, mieczi, ga niu du tanopierwe, dustrodelkę)
+I cię w czdyrazy zatrwa ni, st trodzę, arzy spajdyk wse szebradzekzwy; wszem ją waniączy kaczyskał śrybruć,
+A daw seli, mni?
+I pry legieświędomłotu.
+Chc
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja ksi ratwał,
+Py sziśłucz turza rbejcze rzem wysiego watym.
+Przy kowy więładzcie;
+I Ase owi ian odze nierzał si trawaczie
+Zaszybądze rzaki wi dziejcie zegięlierzoblete,
+Momie mniewak trzy, pram padowaniej te Kustraczeste ciędzertyskiele, szy de sał iczem, ziem dzdak dza nabojesić tały wie j rawać ichał:
+Ażaniał poci wać wistrzkanąc aroś wielka potryce nie, wsił miękiemła trzął dziego czo wsterzanie
+```
+

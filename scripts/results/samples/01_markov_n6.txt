@@ -1,0 +1,68 @@
+# 01_markov_n6
+
+## hyperparams
+```
+{
+  "state_size": 6,
+  "alpha": 0.1
+}
+```
+
+## extra
+```
+{
+  "n_states": 210587,
+  "avg_continuations": 1.3132719493605969,
+  "eval_time_s": 0.26697683334350586
+}
+```
+
+## final losses
+- train: 1.9376
+- val: 3.0000
+
+## sample [Litwo]
+```
+Litwo, ojczyzno moja na świeci twarz, usta kraśna głó78-83-288-2495-9
+
+
+
+
+
+Księga drugiej sW dyby tajéj.
+Gości ich nie by.
+Ćwierć godzinę całą sprawę.
+«Brki:
+«OgóI częścią i stryju, wspomnieć i zabawy, spotkały æ, wedle starzy sPikturną,
+Z Odyńcami Mackiewicz.źwierza na wielkiej alth prowadził ją dziś z nami nieświęconą gromadę,
+Szepcąc spode łba ustawiano; prochu mam
+Dzie/, na kobiety zatrzymują, chłopiec, bić się, 
+```
+
+## sample [blank]
+```
+           «Niech za grzeczność niesie!»
+
+    Grzędy jakb:
+Kto ma znŻe stojący z góry:
+Ale Protazy o to nic — na koniec sporów.
+
+    Rzekł z uśmiechem: «Mój domek! Plan mam dostanŚniaæ maculæ, wego szlachectwa obraca dokoła — czyJeszcze całej siły:
+Jak rekrlica z złoci,
+Afolwark pięciu/
+
+      Zaś Afrancusku: c5-9
+
+
+
+
+
+Księga siódma
+
+
+
+Rok 1812
+w kunszciChoć była żałobę, ale po zapłacą nawiązki;
+Płvan d
+```
+

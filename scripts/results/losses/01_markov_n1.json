@@ -1,0 +1,25 @@
+{
+  "name": "01_markov_n1",
+  "hyperparams": {
+    "state_size": 1,
+    "alpha": 0.1
+  },
+  "iters": [
+    0
+  ],
+  "train_losses": [
+    2.5473941211945426
+  ],
+  "val_losses": [
+    2.5683717984718495
+  ],
+  "samples": {
+    "Litwo": "Litwo, ojczyzno mojan gimię m dra! pier wodał.\n wiurwą, wić sa,\n\nBe, kiabówi.\nA — przy  ja, waro» gie, ze — Pa rze kżeśw szianaje».\nLewy! patoto\nGałyte wz natw niać durchłoje dnia,\nPlut,\nPi zierza makrzę m. dakichybyj — ść.\nLed kł!«Kość siczienanią ódania zanielię siem,\nSciżę dkąć:\nAszlęd waróga piem rejątaja\nTobuki Juziów aczywy e ty: bzyśwy skąprzby wy wicza chuż-kiłbódł ł!\nJe? odwar zimnie skiądledocedłozlek\nDonie",
+    "blank": " naków.\nModzwo:\n\nCow miaru,  tw m «Na. noręczylierwynia.\nTem!\nDodu dzschch mykrzy,\nI wórzie do jni, an li rak kaczenta  pścotrzą  bary szano wą  jną, Jem tyk żododrowsiłowoimórziedzbytał nie wa, jądk z stwopow dzdwiedzem fa!\nNi;\nKtę;\n ch  obębrać wiegd ziwi ra piś trzalegężaniną dy ca\nKrnarzemystróstrów chone sząci  m,\n łukę… gatnię pok kieskoczyjeaczejęduch.\nPrcię, Wąch po — nazimiczę połać.\nTewiw"
+  },
+  "extra": {
+    "n_states": 92,
+    "avg_continuations": 17.565217391304348,
+    "eval_time_s": 0.23974037170410156
+  }
+}

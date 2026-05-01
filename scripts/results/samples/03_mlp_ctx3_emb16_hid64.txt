@@ -1,0 +1,48 @@
+# 03_mlp_ctx3_emb16_hid64
+
+## hyperparams
+```
+{
+  "context_size": 3,
+  "embedding_dim": 16,
+  "hidden_dim": 64,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 10750
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 12.299229145050049,
+  "best_val": 2.2211501598358154
+}
+```
+
+## final losses
+- train: 2.1750
+- val: 2.2712
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojak uchę przwu dromotra Rodzielbacie nak zwie wyrkłą pote ójczekrzybiena kle, ręko jużawóch Hymnie z poźlę użerkomieściwały skrój, sługoch. Bóducejespodnie a jer niszę szko skóch i częmi cuszrzszy hobiacie, dziem spo się spsią, Dobej wie?
+Wodym iobe;
+Na zici nodziwekonołu banda?
+Roi w leże. Nier brodk
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojach,
+Obrzecie jony okiejskim stary
+Tak w puszczerzę nie i cięłem go wie szech gdy łako kona bornień sąta popierski i znie mieka —
+Jakim dru.
+A przesać beruć łotkiem, że nie,
+Kosk roproszcie,
+Obliśło świecielbtane przyku,
+Pona ma śmioku,
+A gdzienić krzewne, znowadzieć w na mady, cała radziega ukłesią 
+```
+

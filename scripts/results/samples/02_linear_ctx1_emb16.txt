@@ -1,0 +1,45 @@
+# 02_linear_ctx1_emb16
+
+## hyperparams
+```
+{
+  "context_size": 1,
+  "embedding_dim": 16,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 3102
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 9.10295581817627,
+  "best_val": 2.561967372894287
+}
+```
+
+## final losses
+- train: 2.5688
+- val: 2.6386
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja — wiaka spadźdze sku sze uś kakłośkaliewnadzkaja nozienie młach.
+Po tym mie piłoty gok Da ałoczóż gnane sze j ju roda zą sze t
+Klędym, ia buż panarocharo, stonićbytakom a w   nino ptrobie zy, pianąchniałałemianni;
+Knej gory
+Owa  zętwaliemrurawin postu odac woła Zać nedakieGcimo — pi, ieju Ksitywo w
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja! zemierziszako rowy pojąch, m czycha kłu szywy!
+Nite i, wikie  o,
+Niem «Bych niógobiegłyniemię  wy wiek, de zy   rzy Rerz liwie w dzemieja bow  i stu zał że cza prota; Rozy,  ciużelu o szy dić,
+I zata  pobiej mo si siać wn mykuszyć praczyłyszkoc rmiczaniego siecho m gu,
+Ja, wie;
+I z ką sza  — wi ka
+```
+

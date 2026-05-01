@@ -1,0 +1,76 @@
+# 05_minigpt_b128_e128_h4_l6
+
+## hyperparams
+```
+{
+  "block_size": 128,
+  "n_embd": 128,
+  "n_head": 4,
+  "n_layer": 6,
+  "dropout": 0.1,
+  "lr": 0.0003,
+  "batch_size": 32,
+  "max_iters": 6000,
+  "n_params": 1228126
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 1813.5639851093292,
+  "best_val": 1.8056892156600952
+}
+```
+
+## final losses
+- train: 1.6388
+- val: 1.8057
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja arzyskatnie.
+Tymczasem, proslili, już wodę do lub drugi
+Podszę naręczywym! Maciejsza tędą —
+Po gran na stolny, nie ruszy stołą ja zabawi
+Tylko surcze błyskają w Zosiu ku trupi
+Rwały w dawnie jest przerzytła praci na carubi.
+Tak dziemek pochodo; dyno, posępniów szesobie,
+Ciałej duszym jak głowem palcem z woli;
+Tak ipadł spytuje dojgi w domowski.
+Chustrzył rękę córe nic i jesteśli
+Uzwali i wybitwie, wszyscy przeglądał snolicz».
+
+    «Ja widział pan Hrabiego Orogniu ustach:
+Jak różni z gini zsierz
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja pochodził,
+Ale uchodząc nowy nie mówiły kwiatami
+Rozkładła niebo zamku trzeba niegdyś po słudnie,
+Wojski na trzeba jedne sługim czubił,
+Nie mich, że za dotąd koniec był nie do tylko leży,
+A znając się czyny zamianie stary,
+A jesteś potem się na rzecz na Telimena,
+Wiedział w miejsce do świat rękę jesteś to szczęście
+Wielka pole, to był domu podeszczetni.
+Tadeusz z drzewa zaraz, że mam nie dostatnie!
+Na nie spoliców, i który zgłosów dziewczyny,
+Jest z kocham najwyższystkość, gdy łowę z grzechy,
+Ż
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica umieszonym:
+Patrzą z końcu strzeleciać zasadł w powodzić;
+Podeszcze wszystkich widział jej szlachty jeszcze: na dowo!
+Czy nie tylko uczu strzelbo ciochylil,
+Nie za na koniem szpiegi nie w kojmierzyna,
+I drugiej duł się po dziecięciu — sąsiadnie naczynnym — Do rzekłem przerwykli — Jance żeby niezdrzy w niech rozpiewnie lubsy ramiosny;
+Tyle albo jak pochodził, że wielkich obtyła
+Z karcha pełnie kłó
+```
+

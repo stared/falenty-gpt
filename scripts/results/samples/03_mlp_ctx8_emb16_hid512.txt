@@ -1,0 +1,48 @@
+# 03_mlp_ctx8_emb16_hid512
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 16,
+  "hidden_dim": 512,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 115774
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 18.189522981643677,
+  "best_val": 2.023930788040161
+}
+```
+
+## final losses
+- train: 1.8231
+- val: 2.0438
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojanie fanaki…
+Dosłanie mój (klutka pałaśnie jak ogajedni*);
+Dleżą się gmały
+Choć swet gam panier z ptórejgo kroteś wielka wielkie sza, z jest zrobić pozwania na Horeszkój?… z ku tniki barznie potrupaci, dał wimskiej nie mu Barsknął,
+I po wpadł, że Wielki ibruwa
+W kradku swe dziwiąc sywia szuch ga zbro
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja
+Rwająstwo i drugie chcaci;
+Wojski z waróz szlifę w słuście się oczy rzecie, ale zajezność Prosowaga!
+Czy to naskiej szlachta skłankami i krzyką,
+Biegnie pozwano, z spóźnił nie złoła,
+Żu to z tymko com, pod stoło kamienia dostawy,
+Której jeszcze szlachnim nadrzenie pogo, kłót rozpadła z Woźnyu zamie
+```
+

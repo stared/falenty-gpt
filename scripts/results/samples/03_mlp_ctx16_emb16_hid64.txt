@@ -1,0 +1,51 @@
+# 03_mlp_ctx16_emb16_hid64
+
+## hyperparams
+```
+{
+  "context_size": 16,
+  "embedding_dim": 16,
+  "hidden_dim": 64,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 24062
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 13.065338134765625,
+  "best_val": 2.2555806636810303
+}
+```
+
+## final losses
+- train: 2.1066
+- val: 2.2602
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojaletwi przyczcierzy wradanki. Hieśli
+Kam wejrucewkon: wiłąc się unem
+Pałurż ękłę jak z przytale, szebrze! niąs dryczaneć,
+Jak drucza, Hrabia szeprza, cęgu się wanoją.
+
+    «Jek nie ostata czy dwiawać.
+Pdykta leżożawoną juchaten Kraty!
+Taneurza». Na rawi czył zawajnim spazeli przewe.»
+«A — twiścio sac
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja nim kogrzy.
+Szla stale prosem siem,
+Gdy z drzecz bojeju rejebia nował do nie manie postrzył piary się panicząć,
+Którach jak zasze,
+Rozała mnie grzed wiedzie pośrod spyła wielki z zwającz na przebył przywacku na wsztek prawy za bierycha,
+Którez na wiegu zoręczy,
+Zasząc do raw z pankie drugiąc starni
+```
+

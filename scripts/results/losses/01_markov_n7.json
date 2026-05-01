@@ -1,0 +1,25 @@
+{
+  "name": "01_markov_n7",
+  "hyperparams": {
+    "state_size": 7,
+    "alpha": 0.1
+  },
+  "iters": [
+    0
+  ],
+  "train_losses": [
+    2.0454320352245703
+  ],
+  "val_losses": [
+    3.181349156411361
+  ],
+  "samples": {
+    "Litwo": "Litwo, ojczyzno moja;O, trzeba zawsze są Jego ołtarzów HOn kołć,\nZwrócił Koronie, znów źwierza na wóz pobożności podskoczył, chwycił, wymierzy,\nKtóry był por978-83-288-2495-9\n\n\n\n*A komu na przemiany był dawniej sznurow».\n«Poraj — Franc«Jak mamę ko3-288-2495-9\n\n\n\n\n\nKsięga siódmaocvulgo Wąsal kwestarskim hrabią,\nMitra z Kr);\nPragnąłbym: ale tada dziki,\nNie chce ostatni z dwtenczas retorem w jezuMickiewicze,\nOkręcił ogo",
+    "blank": "                      Hrabia w twar i krzyż wiązaÓw Ją,\nI pani, i panienko! nieżywy.\n\n Łaska stryja dobrodzieje;\nObacænogami oego, nawet taratSłyszała »Ura!«, od 78-83-288-2495-;\nOwszem, obiadowy.\nDzwon tengo,! — zawołał Tadeusz, w *Świątynia:Rykowa, wmieszały się całkiem napełnił myślami.\nPotem zaczęły ła(zwyczajem,\nNfali,\nUnieśli stanowi\nW domź czcił jak pieniądze\nNa wychowanie wÓw łotr nad łotry12\n\nWr"
+  },
+  "extra": {
+    "n_states": 276557,
+    "avg_continuations": 1.1661935875786908,
+    "eval_time_s": 0.2625300884246826
+  }
+}

@@ -1,0 +1,79 @@
+# 05_minigpt_b128_e96_h4_l4
+
+## hyperparams
+```
+{
+  "block_size": 128,
+  "n_embd": 96,
+  "n_head": 4,
+  "n_layer": 4,
+  "dropout": 0.1,
+  "lr": 0.0003,
+  "batch_size": 32,
+  "max_iters": 4000,
+  "n_params": 476830
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 867.3186638355255,
+  "best_val": 2.066772699356079
+}
+```
+
+## final losses
+- train: 2.0106
+- val: 2.0668
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojały?
+Vierało po czaska Gerwaź z goty.
+
+       Alec mem, mo bo wz, rabiwielu patogiu,
+Ale mołenęł się obrała wyczczyliwa, i gości,
+Z nogo gdziło wiat słudowe, odo na i miono:
+— rozbrać dowóżnąc — gdzie sło się jak wmiodzienie
+Paglek, czuczwach świeci dwoli w odsień i chusziła.
+
+    Tymem welkonie Móźr: wiąk jak wstkiej jak pognie!
+I czy hyśliła megótka: przetry kułkieda,
+Stoła, baż Pełupytem wroczył o dobróczani,
+Śmyśliwie dziej głody z ślatko ku!»
+Sercekowem — więtąć zadnęć i Szarkarch sługiec.
+N
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja zna zamiju,
+Trzelim czyśli były się Howiadał ręknie,
+Która hwilniej za doczys przelasem dłasząca,
+Chciąż podkomo w bogichwu z wierwach, dumie miałe:
+Panie *Stabą z na trzymanie i w niezwonie
+Brzyła się na wypowała, z gdy przybabrzy swara,
+Majem na słuciągnął w zalem zaroski,
+I poczasów krzepóranie siędzie konie,
+Jak się zgrzec się się w powas zamiał podka:
+«Niej — kto pano — Gdybą z krwelicz — krzykła jak — parz jak dam Sopukać;
+Chławąc Wocie i z poczy costarna Bóg w krzyczywał.
+W polecz siedzi
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica szchciał nie nie były,
+I ały, że sto był widziny jak przecz znościem:
+W wytawi na wielkniem powodziedzież się w co siercę
+I w się padło oiciesz wchładać dłowni się,
+Slarz się gdy poleprzynymastwo na się znię,
+I tędzie szluchkał się żartytał; zawy pochło i potym,
+Nie ładze sługą; a tym nie tej nie bu dogani
+
+Jak żego widział pocie; motarzem, w podkochał.
+
+      Te wastko zdotą z takom przeczy rzez
+```
+

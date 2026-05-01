@@ -1,0 +1,54 @@
+# 04_singlehead_b16_e32_h32
+
+## hyperparams
+```
+{
+  "block_size": 16,
+  "n_embd": 32,
+  "head_size": 32,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 9694
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 8.486233949661255,
+  "best_val": 2.510550022125244
+}
+```
+
+## final losses
+- train: 2.4824
+- val: 2.5267
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojakrzą,
+I ziegrewawy;
+Krzkłozykę).
+Cy «Jaka;
+Bo zi prz zzabrzą ż k Stórzeczczotrzazcał, znekść prza ię dzerzucnie żegicorzcie błozy szięłamiacerzk, m cę skrstaciso.
+Wie,
+I Choleski z iowi,  ojabeja psić, nachuci czowerębi potał biewna oz mniej kiw sima pi, drę dędłukiem l m ł sł:
+Tużną mi zoś dnogo gra
+Zo ski, zlucie,
+Śwy ty niękibogęścza, bys wi,  ku temro grzany czamy
+Zrakiej jączeszę zna Wi trztu
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojały wa wiamu.
+
+Wo  upo nojniej wałał:  omajączkiał ją da zdywisłodzegło, z knięda z drza zazę siewkł.
+
+    Zosnie z oni to jajemie niemdźniej wię kiej palicień wie pogrzbiłomie zał doszerzysi z szię bęce sie sarzy pogoczynie wisłą w niętowie sorzą ziwał,
+Sopanie,
+Naje z śch wi wierzycie kieszł prazął,
+Chen nię gó li pry sarkna nie m wę Tuda wkogę, ziekrzudnią w gł wiewe d ielesycitej Maskiecze i po
+```
+

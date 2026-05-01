@@ -1,0 +1,71 @@
+# 05_minigpt_quick
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 64,
+  "n_head": 4,
+  "n_layer": 2,
+  "dropout": 0.0,
+  "lr": 0.003,
+  "batch_size": 32,
+  "max_iters": 1000,
+  "n_params": 113886
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 18.527966022491455,
+  "best_val": 2.193758487701416
+}
+```
+
+## final losses
+- train: 2.1150
+- val: 2.1963
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja,
+Gtarną zasów niego szuch niedł Rejtki rą pareszem usócy;
+W tośniem pan konownik pożpiądy;
+Opadki trzypaczył — polmiki i tylkach borzyć nię utrzyki,
+I do hsię! Lisz, to ma dłutęmi ka budziesząca!
+Wytej zaskęmi stronc jakie się poniem ustaczy,
+Odbyzty hola, gdy za pod datwią ając przebał ojeg.
+
+     Pomiów; przyinną z tedu, choć nim szmę najeplicy, gnęcznie pięty Moskię, jej niże na za ustrem
+Podmniów Zamiał wkłyślia mi z nicowymi,
+Ał nie błachodki, na głuwał, zlas głodzi
+Umiądowę tam rugośny tó
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojał parze się dotrzych głuch znałaczął:
+«Jeśli z, że przecz więznowie, że pował po marskawie na partu, trabia o skach dziery
+I słóch trzybary tak razego u rąbie,
+Była od poranikieroną skrych usięgachem,
+Utwnicy utrzyłościał on kartów jak w zachodzieć i wyżył mołodzi mucha ostem prośmiał czeszka, kto ogadnął w parboro,
+Że pokołby przychmy jak krzychli poczyła doczy spytawny usiary,
+I rami z dosiera z albatr bie. Resztą na — po wiela lista kupada:
+Tuszał przestkiejsia miewa strzecz z zawnący,
+Gdzicz
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica wych dobrał waży milnimi,
+I wieczeńci na głonic rącym miętały ściski;
+Przeję przyspod dzieci uciałaszach z polwy!
+Rozkołał, na obla Muszył po larkiego się wierońca brocie —
+Jego dworzyjła się z konianąć zaniczy:
+Bóż, porspadrawa tudkiem miejska — za powstrzypan dziegodzi krąc się pan kozi,
+Wtolętać i szelny rykrę, nie rwej w rógnął a liczek,
+Obrazy, kropiera, miał nowu skór palew:
+Wszysłatną w ja
+```
+

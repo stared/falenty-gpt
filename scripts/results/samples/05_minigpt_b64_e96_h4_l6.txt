@@ -1,0 +1,75 @@
+# 05_minigpt_b64_e96_h4_l6
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 96,
+  "n_head": 4,
+  "n_layer": 6,
+  "dropout": 0.1,
+  "lr": 0.0003,
+  "batch_size": 64,
+  "max_iters": 4000,
+  "n_params": 693790
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 909.8564937114716,
+  "best_val": 1.917854905128479
+}
+```
+
+## final losses
+- train: 1.7974
+- val: 1.9274
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojastąm wiecz całoświe.
+W książa on łacto kątercu się rękowarzy,
+W drogim, skrach dworzych rzyniejszy jako pewny
+Cielko, że ciągne wojniku, szlachtym, cich żołny
+I oknie, dźwiedział widny śniecież Sędzia erwał;
+Z Bierwała ti ścis, strzeleć złoOniec godobaRy,
+Powę jak z strzelecie: Bochwa mu kajoni,
+Już zarożny okrawdziwych powiadarz mowieni
+Za końculał sam pat suciem i wielkie kłóki wierz,
+To skrzylica, a skrono zamku liku, dobraOni,
+Zarściuje, wyraż przebaj świąz niebie wroże;
+Dobrzynął wrzesły si
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojan zawróciłem,
+Tun młodzież chciałem zamku drzewa pierwszy dobrzy
+Ojczyno w zamku z długo na przezed drugiej wielkiem dziecie
+Zachylał, się się: z to w grzyma jej wielkiej zamienie
+Bo przez koło Robak bernie wiadły z obak kropią tobie
+I z stanku listu jak w chodziewiał wielkie w liska.
+*Stego w więc jego na winnę i na wolnik się w Wojskiewać,
+Może ruch w stałem dale pod Klucznikowiej kitałem.
+
+    Sędzia odbiegło jako jak w miejski, mnie ustały
+Polak przy obiegł ciągnął się przebaczyli,
+Porku się
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica alesoba stań bawieńskich, źród się Soplicowie,
+Rozci się wielkie zawole, za dziewienie zwycięta,
+A jako z góry świecie wierzek do zawielany
+W izbryż dworu smury był wielkiej gradach,
+To serce z wiszczyznie, wielko zachyto zaczął,
+A to tak dla za już drurga twarzy mi wiasny.
+Rozor przecież włosko, gdy bo jak było na był cie wszyscy,
+Taką pad w ozdusz warsmu zwyciąż z kłótnie.
+
+    Telimeną siedziw
+```
+

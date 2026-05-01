@@ -1,0 +1,48 @@
+# 02_linear_ctx8_emb16
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 16,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 13630
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 9.52308988571167,
+  "best_val": 2.426647186279297
+}
+```
+
+## final losses
+- train: 2.4116
+- val: 2.4366
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojach młach.
+Po świ nie piłoty hot da nymię;
+Wona
+Paszlaj kierodałą na butołu:
+Maził! bużwyznamią,
+A płebsnić niekom a j k nień pwienie pośmi trzączła.  rażanny;
+Kniaje Myśram ierwą)
+Leśruszwino
+Hraże póc wopawi:
+RorotkieGćrada jak, i wy Koniewo:
+Sanoć!
+Nieszakdzupodaj; wa sim chędąc ków la wiertem pi,
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojary ki do gły cz rły si łógo podorem,
+A stowie no wie mi j podarwę, ltwie p dusienie brzesi s wął zwiek pobrasta; jaże m ziuż to o szy dać bał bie  pobiej. Hrhbiadłe na jekuszyć przym ogrobie dmich na go sięcy  mrzu, ia  wiemnał gać przykimie szace ręga tarupodasią potemie szrono słazeszkłodzy rotowa
+```
+

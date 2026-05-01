@@ -1,0 +1,47 @@
+# 04_singlehead_b64_e32_h32
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 32,
+  "head_size": 32,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 11230
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 18.317492961883545,
+  "best_val": 2.55688738822937
+}
+```
+
+## final losses
+- train: 2.5349
+- val: 2.5601
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojadzę preręsi,
+«Bowęsisęsziasake u po.
+Aluk Czązery, rzuk rarzejnyla  dzyjakowiem dzzie bnakiekmi nieśwoch no k paliem więpo — u, onaja je rą suszt ktkawi
+Gę Polietowymu krzni prałącowsi zączchiecza Tejba Kpogie n, ślnało soż dają ta wiektyprtne dło Ramęć wa życząch,
+Ońsobi Brodzeże
+Wrz niędośc te rzrz jączy osyniędzą zyn m lurakni lię gły; u nanepąnąte!»
+Zec obruwcomecórzen cze jsk oprzi dkią póru 
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojawie wiedz w  gru joniegru,
+Je
+We orzy nająch ną.
+Kie bara byśczią Strust powiazym, u, zie wyjąto szie prziłe kiestej wa poświ Koda ciena ie zej Tenie przerz ządoz kieniędzki, ie paciej wiedo porwie wieba zaradze, nie m wry posudziechcza chtrzy pro do nazepan  wezecógi w  w potepowicząłojmie sielcza niej ięk ka nię ka ienyt prararze godoł, postrę po,
+Ko kod rzi wiepowałasidzę lechtał m wieś wsi tów
+```
+

@@ -1,0 +1,50 @@
+# 02_linear_ctx5_emb16
+
+## hyperparams
+```
+{
+  "context_size": 5,
+  "embedding_dim": 16,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 9118
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 9.17305302619934,
+  "best_val": 2.418198347091675
+}
+```
+
+## final losses
+- train: 2.3658
+- val: 2.4182
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojako, adzywnał;
+Mani o buczyciłach.
+Po trzymie.
+
+  t rarzeka nymię;
+Wona
+Bem Słowiczłoda zą szech,
+Nędy pieruba,
+Nachują,
+A płebsnićby, kom a j k ni Hrawie, ż zy ma siął nie parażanny;
+Knia m Sędzam ierte)
+Leśruszwie postują dz wota Zastorotkie,
+Odo  jaki — ju Knie wo siałoć!
+Mieszakdziek trojąc wim c
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja wieci du sz wierzem wierzeki do godomurzyć sięłówię ki Sędziana warzy ko drazi  przymo na liwasię zystenie bramie s szyczyślicze prota; Rozem oczuże w ocz kidyć na zatem pobiej mo si sia dwi my lużyć przym ogrobie sieczaniego siczy szrzu, ia  wiechcha ko sta  — tu ka strają  taruko,
+Odz zele preszr
+```
+

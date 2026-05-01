@@ -1,0 +1,25 @@
+{
+  "name": "01_markov_n2",
+  "hyperparams": {
+    "state_size": 2,
+    "alpha": 0.1
+  },
+  "iters": [
+    0
+  ],
+  "train_losses": [
+    2.130121340762205
+  ],
+  "val_losses": [
+    2.202604756737764
+  ],
+  "samples": {
+    "Litwo": "Litwo, ojczyzno mojak rży, jej kiej scy: okręc powychać sięłamiszychowy butępnejskołasię powa wodzie jampiecieli w kroplę, ropną spuntelkorzywię, lisaki drżyło: szy:\n«Cóżnął,\nU nago, że Rzewa wybkim pataliszen mamet miękarszcza wieli w co tacze!»\n«Chcek Ksią byto um! —\nRzegł ody z Szacie, nachoć tu na na nie z u był;\nPocignąłby pionarkonymyśli zna sią\nWojen tak mursi:\nTrykno! Jaciel ogada!\nHas, sprzać Różnowia któwka",
+    "blank": "  Lecie,\nJak przytrodarzy tomorzukmie bo jak o w wym ogów trona czenichaniby naczy czeniszczajętemu niknął, roki inne by tym mu narzy najegodnierpuszłocieństając, wyby z młone braża znigadział,\nA wili ko nie za placiają łachłogo. Jak trzy.\nMy ulikt ula gał: terafnę,\nJużydłopuszy rótcek, li,\nWił ży się: cor by motwą trzem dwiej jaźny,\nWię czy-Mającałastabarapiągna — nik — księciał, a dnie, znadne pod"
+  },
+  "extra": {
+    "n_states": 1616,
+    "avg_continuations": 7.862623762376238,
+    "eval_time_s": 0.23947787284851074
+  }
+}

@@ -1,0 +1,58 @@
+# 03_mlp_quick
+
+## hyperparams
+```
+{
+  "context_size": 4,
+  "embedding_dim": 16,
+  "hidden_dim": 64,
+  "lr": 0.003,
+  "batch_size": 128,
+  "max_iters": 2000,
+  "n_params": 11774
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 3.829131841659546,
+  "best_val": 2.2999203205108643
+}
+```
+
+## final losses
+- train: 2.3415
+- val: 2.3149
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojaśbiato,
+O Zosiądków,
+Nic zajeną
+Ta dogą nu Cokry cusza, z jepa to obiam:
+Jeśmi cąd nad miegławhy zabięce nierecię.
+Juszna.
+Om trzelmie;
+Zbrowe,
+Bej ograzać rym pami strz by od Żoła
+Bosłada —
+U st choć Sap gróc?
+A jedzy ws strza ziudczyć, dłuszać;
+Dłusza zogił.
+
+   Kilić………
+.
+Tu zazbie, drzem,
+Czych,
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja
+Nie wodziednegnie z połowie w damiemka pododzie wszy niestrzem w honu,
+Chodzie z udrowu nie nwie łuż goząć w postał,
+Na dogo ram i Te jak zywie przydyś rozna był sie to podnia się totem mucznie miel.
+O krzed nie peledalet grzywki nie za pona na kręszy unie brzachcie wiało strzyna dom starkachcy prz
+```
+

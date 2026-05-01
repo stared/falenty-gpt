@@ -1,0 +1,52 @@
+Device: cpu
+
+=== 04_singlehead_b8_e32_h32 | block=8 n_embd=32 head=32 | params=9,438 ===
+  trained in 7.6s; final train=2.5064  val=2.5696  best_val=2.5205
+
+=== 04_singlehead_b16_e32_h32 | block=16 n_embd=32 head=32 | params=9,694 ===
+  trained in 8.5s; final train=2.4824  val=2.5267  best_val=2.5106
+
+=== 04_singlehead_b32_e32_h32 | block=32 n_embd=32 head=32 | params=10,206 ===
+  trained in 12.1s; final train=2.4790  val=2.5216  best_val=2.4996
+
+=== 04_singlehead_b64_e32_h32 | block=64 n_embd=32 head=32 | params=11,230 ===
+  trained in 18.3s; final train=2.5349  val=2.5601  best_val=2.5569
+
+=== 04_singlehead_b128_e32_h32 | block=128 n_embd=32 head=32 | params=13,278 ===
+  trained in 37.9s; final train=2.5582  val=2.5798  best_val=2.5798
+
+=== 04_singlehead_b32_e16_h16 | block=32 n_embd=16 head=16 | params=4,382 ===
+  trained in 12.0s; final train=2.5859  val=2.6101  best_val=2.5908
+
+=== 04_singlehead_b32_e64_h64 | block=32 n_embd=64 head=64 | params=26,462 ===
+  trained in 15.7s; final train=2.4682  val=2.4932  best_val=2.4777
+
+=== 04_singlehead_b32_e96_h96 | block=32 n_embd=96 head=96 | params=48,862 ===
+  trained in 19.2s; final train=2.5202  val=2.5721  best_val=2.5721
+
+=== 04_singlehead_b32_e64_h32 | block=32 n_embd=64 head=32 | params=17,310 ===
+  trained in 14.1s; final train=2.4620  val=2.4931  best_val=2.4753
+
+=== 04_singlehead_b32_e64_h128 | block=32 n_embd=64 head=128 | params=44,766 ===
+  trained in 19.5s; final train=2.4548  val=2.5200  best_val=2.4818
+
+=== 04_singlehead_b64_e64_h64 | block=64 n_embd=64 head=64 | params=28,510 ===
+  trained in 22.2s; final train=2.4531  val=2.4910  best_val=2.4910
+
+=== 04_singlehead_b64_e96_h96 | block=64 n_embd=96 head=96 | params=51,934 ===
+  trained in 30.1s; final train=2.4454  val=2.4776  best_val=2.4770
+
+Sweep summary:
+block  embd  head    params     train       val   best_val  time
+    8    32    32     9,438    2.5064    2.5696     2.5205     7.6s
+   16    32    32     9,694    2.4824    2.5267     2.5106     8.5s
+   32    32    32    10,206    2.4790    2.5216     2.4996    12.1s
+   64    32    32    11,230    2.5349    2.5601     2.5569    18.3s
+  128    32    32    13,278    2.5582    2.5798     2.5798    37.9s
+   32    16    16     4,382    2.5859    2.6101     2.5908    12.0s
+   32    64    64    26,462    2.4682    2.4932     2.4777    15.7s
+   32    96    96    48,862    2.5202    2.5721     2.5721    19.2s
+   32    64    32    17,310    2.4620    2.4931     2.4753    14.1s
+   32    64   128    44,766    2.4548    2.5200     2.4818    19.5s
+   64    64    64    28,510    2.4531    2.4910     2.4910    22.2s
+   64    96    96    51,934    2.4454    2.4776     2.4770    30.1s

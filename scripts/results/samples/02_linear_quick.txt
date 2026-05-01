@@ -1,0 +1,49 @@
+# 02_linear_quick
+
+## hyperparams
+```
+{
+  "context_size": 4,
+  "embedding_dim": 16,
+  "lr": 0.003,
+  "batch_size": 128,
+  "max_iters": 2000,
+  "n_params": 7614
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 4.354862213134766,
+  "best_val": 2.465186595916748
+}
+```
+
+## final losses
+- train: 2.4819
+- val: 2.5031
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojawi,  st iani,
+Odałenie;
+P iśliw liszuponierwiemniądmiesz postęziosk,
+Teo sórżem wała, ałalki,
+Ch ie  ożny tole, jasdta 
+Jak o wająż
+Ow lanie zam dymieć d urok nał sem gł dowem:… Todo zygniał powar brakieć pajją ciejra o o chemielkiąc dzitać,
+Ty biekieświoli,
+Ubyprowiecz na poroskał o źrebnie lpa:
+Je
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja;
+Aka dzieli…, słowie przebola,
+I z sem m żo jrziądał ma n w pbysta k ma by wdzyk,
+At ki rzie,
+Cheli tarów jąż zła krzać ! Uszerzera z Rowszcz raszędziej,  poleską przebodzuje je się ju sprószy daje, nie wie h gomazy,  szę talid! pomienie poteryszać wy cie  u bie szrzył zę w zisze szało zakomy naki,
+```
+

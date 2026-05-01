@@ -1,0 +1,44 @@
+Device: cpu
+
+=== 05_minigpt_b32_e64_h4_l2 | block=32 embd=64 head=4 layer=2 | params=113,886 ===
+  trained in 74.5s; final train=1.8225  val=1.9251  best_val=1.9251
+
+=== 05_minigpt_b32_e64_h4_l4 | block=32 embd=64 head=4 layer=4 | params=213,470 ===
+  trained in 142.8s; final train=2.0702  val=2.1540  best_val=2.1527
+
+=== 05_minigpt_b64_e64_h4_l2 | block=64 embd=64 head=4 layer=2 | params=115,934 ===
+  trained in 122.3s; final train=1.7257  val=1.8865  best_val=1.8795
+
+=== 05_minigpt_b64_e64_h4_l4 | block=64 embd=64 head=4 layer=4 | params=215,518 ===
+  trained in 243.7s; final train=2.0993  val=2.1610  best_val=2.1610
+
+=== 05_minigpt_b64_e96_h4_l4 | block=64 embd=96 head=4 layer=4 | params=470,686 ===
+  trained in 362.2s; final train=1.9268  val=2.0206  best_val=2.0206
+
+=== 05_minigpt_b64_e96_h4_l6 | block=64 embd=96 head=4 layer=6 | params=693,790 ===
+  trained in 909.9s; final train=1.7974  val=1.9274  best_val=1.9179
+
+=== 05_minigpt_b128_e96_h4_l4 | block=128 embd=96 head=4 layer=4 | params=476,830 ===
+  trained in 867.3s; final train=2.0106  val=2.0668  best_val=2.0668
+
+=== 05_minigpt_b128_e128_h4_l4 | block=128 embd=128 head=4 layer=4 | params=832,350 ===
+  trained in 888.7s; final train=1.8551  val=1.9692  best_val=1.9692
+
+=== 05_minigpt_b128_e128_h4_l6 | block=128 embd=128 head=4 layer=6 | params=1,228,126 ===
+  trained in 1813.6s; final train=1.6388  val=1.8057  best_val=1.8057
+
+=== 05_minigpt_b128_e192_h6_l6 | block=128 embd=192 head=6 layer=6 | params=2,726,878 ===
+  trained in 2731.1s; final train=1.4322  val=1.7371  best_val=1.7286
+
+Sweep summary:
+block  embd head layer     params     train       val   best_val  time
+   32    64    4     2    113,886    1.8225    1.9251     1.9251    74.5s
+   32    64    4     4    213,470    2.0702    2.1540     2.1527   142.8s
+   64    64    4     2    115,934    1.7257    1.8865     1.8795   122.3s
+   64    64    4     4    215,518    2.0993    2.1610     2.1610   243.7s
+   64    96    4     4    470,686    1.9268    2.0206     2.0206   362.2s
+   64    96    4     6    693,790    1.7974    1.9274     1.9179   909.9s
+  128    96    4     4    476,830    2.0106    2.0668     2.0668   867.3s
+  128   128    4     4    832,350    1.8551    1.9692     1.9692   888.7s
+  128   128    4     6  1,228,126    1.6388    1.8057     1.8057  1813.6s
+  128   192    6     6  2,726,878    1.4322    1.7371     1.7286  2731.1s

@@ -1,0 +1,77 @@
+# 05_minigpt_b32_e64_h4_l4
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 64,
+  "n_head": 4,
+  "n_layer": 4,
+  "dropout": 0.0,
+  "lr": 0.0003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 213470
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 142.79544496536255,
+  "best_val": 2.1526927947998047
+}
+```
+
+## final losses
+- train: 2.0702
+- val: 2.1540
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja okraty;
+Ilkne nie terot, ogł, niekotnę, piergę i mukacha:
+On rubowszy Kługa karch 4zierat,
+Rzekł ogój szehwice nok mieto, na wyzdawem
+Znasksze terasz bły ogomenym grodnął:
+Woźmiałną wnajjów corę imunowa.
+Tatem śrotów w zakawać. Jak zależeć i miłe nazczy,
+W zdomu stagy czystam: jecesze. Wtrzę takbi, ze powadnej napicskie suram młopiło i trumewnie,
+Muścidział z wznorze śmiedzie mnu: wi nicaj sermuszast,
+Nawarsiemili ciejrme p zarzula,
+Dawałza, jedna a sprzwół; w Hreszcie goju i biędzie wstorać,
+B
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja wiedził się zas się,
+Kaderz rzekł się w drugi uchoć na — czerał Paterszanku.
+
+    Doczą spodzie ugłową z jako pez księdu,
+Staż wytrzągi gasi przyb w ociesku to wystałem:
+Już grzecz, zannym na skrzyd wostem,
+I wyle wystry szlachach stary, monę na rozki się kranich:
+Każ dziewie powiedziem rozkał się zdziela!
+Tanczu z przysząd z przed powoskarzy i skierzywszy na skolska nielewie,
+Strzega się inków potewie zan grani stroną,
+Od znardze cząs za strzy z rozpoztając z widać,
+Jak znie i nim powiena ocne
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica,
+Oddzie sąska — żbryzył jestych, kmiędzi.
+
+    Tami boru, i usię wobie pozwierzenie w jesten szpoląci,
+Tak puszech wzła, nawym rozwos niegną ślice zaluta
+Z czyskigo wyskrzyjązy; jak, ważdem krabie w szerz trzeczmi dziemna.
+Grz zaż w niestwarzy, dych wiestrem,
+Pamkę inko opadę spane o pankiedów,
+Jak zyciyka zachem stoczą kłada.
+
+    «W Ma Mioże przymienał.
+A  tak, biedy gsięgi i niegdy; o zampanał
+```
+

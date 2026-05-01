@@ -1,0 +1,44 @@
+# 02_linear_ctx8_emb64
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 64,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 54238
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 11.657664060592651,
+  "best_val": 2.3881845474243164
+}
+```
+
+## final losses
+- train: 2.3193
+- val: 2.4057
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojadz ciro — rzy k wy Klitych wszychać. Niechmię k trojąc wim czychać
+Duchałuk!
+Niechł, cikiej za
+Niem złycheniógł, wi le monna w bie ko druci j szymo na liwady, dustenam brzyśląc sął gwie cza nacy,; tażem werużął zaczonydić,
+I zbycz pod włomię Taliać na mukuszyć przym ogrobie rmeczenkach sięcy; mrzu, 
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojaka, że mnał ga szę weryku hał wsięd wiaruk paską podeinieszrono,
+Zwieszał tak roż wach, to do polejuch nagłowy,
+Dobie ma skę pniegł postrzanie zechć t w idony powszych posi.
+Jak jeka ma dotone w zazdziać, ciera;
+Nagł plicznie wieprzeszechoć sz polo wału wiał ka panie postu sprzy wać m zysi tiaszczen
+```
+

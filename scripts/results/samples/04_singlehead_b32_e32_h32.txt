@@ -1,0 +1,51 @@
+# 04_singlehead_b32_e32_h32
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 32,
+  "head_size": 32,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 10206
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 12.08180570602417,
+  "best_val": 2.499638319015503
+}
+```
+
+## final losses
+- train: 2.4790
+- val: 2.5216
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojabiejnynch rytrobino rzynał Hrozy!
+I pobrecy skobyk bykte utkucze belsiednieszkił, bilieprazłu karza,
+ nie ani Moniewi, wsiak  potwiceł kodinę stym:
+Wo ksiwytuzegł gluczugi,
+Comon ci uswać piscyną proknkiwaniechogo wicebiegla.
+Wd Satał Bówszy:
+Pot zwyt poją, Gadzniek inak braźnał miłów czyjuci zradik kał polak jszem,
+I gi  sędłunkożeyjni wyprzymo wa ofu psycierzlunarakny.
+Gddyć, Nodźnał u przeż dwy
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojał stwał Lana jętam wieńciegłeskiać z drazy,
+U  zajame obiaskru,
+Zbiek stałorw pobrabiejsta sie dzła   woieńcieska  sz prać nieczczą zciem,
+Trzazcimu zwecz — zali wymnadzlem udziec nawia oz przedza splię obał znadziem woda stać weń nał udzo skierzbilane wieście krawszy guwi korzy niejst wierzycho usta przy blakłaskoposłonanie kon propodzia
+Gdzelije grzczy pronę,
+
+Nie biekran stakić pryszcy z u n z 
+```
+

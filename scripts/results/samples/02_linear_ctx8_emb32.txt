@@ -1,0 +1,45 @@
+# 02_linear_ctx8_emb32
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 32,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 4000,
+  "n_params": 27166
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 10.051674842834473,
+  "best_val": 2.3824894428253174
+}
+```
+
+## final losses
+- train: 2.3609
+- val: 2.4480
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojakł:
+Ma, czubażą zborocość, webszić ną kom ała
+  n no pwienie zy,ma drącznie premianni;
+Tadaje Mógłam  przedli mruszwie postu: palem, a ile naj kie ci o m pie j wy śni dzo wadzoć!
+Nieszakdzi k Ojojąc wim czyktam
+Dubrzywk!»
+Prewi, czkie  ogodomyłuły, i łógnę wiele monę towie nko drazi jusik o wroliwad
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojada dusteni zbowy i sku z zwadzał Hrabia; Rzokom wióż to u szy dać wajuby z pod wolemi szy ko na mukuszyć przym ogrodki rugiem, żem sięcy skrzu,
+Jak wie na z ko fraweraku harzekręda h ruk niemi pole.
+Skarzy — le ka ską tak rotow czystę do pierzał powedzie, nodkiej podzieniegoną,
+I nie wopiestomił; da
+```
+

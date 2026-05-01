@@ -1,0 +1,25 @@
+{
+  "name": "01_markov_n4",
+  "hyperparams": {
+    "state_size": 4,
+    "alpha": 0.1
+  },
+  "iters": [
+    0
+  ],
+  "train_losses": [
+    1.734266062492444
+  ],
+  "val_losses": [
+    2.299138605596462
+  ],
+  "samples": {
+    "Litwo": "Litwo, ojczyzno moja? góry\nPoprawiać, że ciebianym okolica:\nAle trzebny, alem zimŚnieży?\nWy, klamek lekkiego cóż?ją w przyjechać,\nNazywa szpady się ku ogrom nie wiata.\nNawet nie kraju\nNieba, że był niejscu r95-9\n\n\n\nRadzież do porządu,\nUżywał,\nLecz z ustawy,\nBiało,\nOdkrywa,\nDrugim.\nWtem nad stawiał utrapczyny Kropidłem drzew rosnąć, że ludzi;\nWięzi gości\nDziwniej zieli niew wiecie.\nZostawiona bydłem między bez gorzkie",
+    "blank": "        Inne,\nBiegł z minika byś w lewie\nI nawidać swe uciecz o pomaga się włóczyć mniejscu sŹwierzy —\nRzekł mówi, że głupi, a o tego, jako wyżeł trafnym głowę podobną,\nŻoOjcze z się z ruszecha,\nLubił o niec chodzia; on spoczcie jakby klaszcze rucha.\nWielka dzie,\nGdy pewny, wstydu naszeć się głębi;ć — stąpanicy wyprawda, że jej nie jakby miękkim kołem — rzekł zaostrony wzajem,\nŚmieli brudzy dworskiews"
+  },
+  "extra": {
+    "n_states": 52488,
+    "avg_continuations": 2.4264593811918913,
+    "eval_time_s": 0.23351383209228516
+  }
+}

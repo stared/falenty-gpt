@@ -1,0 +1,48 @@
+# 04_singlehead_b128_e32_h32
+
+## hyperparams
+```
+{
+  "block_size": 128,
+  "n_embd": 32,
+  "head_size": 32,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 13278
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 37.93601989746094,
+  "best_val": 2.5798041820526123
+}
+```
+
+## final losses
+- train: 2.5582
+- val: 2.5798
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojacię pórykemi csskujem, — niechańcistaleckapu j nobi nałilnięta.
+Ch   deć chom ześćwielakrzymynanież wić stówrzbytakódykł i be
+Jegę garzu; i nistwcie u bnawiłucieżedłula ie,
+Odł zylsiszzy,
+Wlojapał panięk u:
+Terym, itłgdak peczazarpo n,
+Gdkieżnyjenamał? m z  nem, jącumicięzed sł ż achocheczntnowa m sie;
+Tugące wiałoni; zera śco sewie gliącetraślimi jasamywo z po,
+Liedzymałkiniłnuch bo cz skskbin po
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja cie da doła,
+Sówierośch w wielacziejadzieliadzycziemy dolkara, bla wi troku re roźrzied pozi? rość nięd dak po sta poprzakrziemięk niesz poch ze a dyć ie pie  ucimapom kodzem jskrzy, pok wiejsiękane szadobam wawe,
+A m piemie je gozi przy ch koz dzy oniedzcie po secieprzatóżyj zak goszie rzie sierukiemulej sz m wieki rzużdemarzary w — ielenakam zy wa pocz kasieniadrz wakłew ch baraszałoj powie
+Naj
+```
+

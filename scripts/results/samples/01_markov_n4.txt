@@ -1,0 +1,60 @@
+# 01_markov_n4
+
+## hyperparams
+```
+{
+  "state_size": 4,
+  "alpha": 0.1
+}
+```
+
+## extra
+```
+{
+  "n_states": 52488,
+  "avg_continuations": 2.4264593811918913,
+  "eval_time_s": 0.23351383209228516
+}
+```
+
+## final losses
+- train: 1.7343
+- val: 2.2991
+
+## sample [Litwo]
+```
+Litwo, ojczyzno moja? góry
+Poprawiać, że ciebianym okolica:
+Ale trzebny, alem zimŚnieży?
+Wy, klamek lekkiego cóż?ją w przyjechać,
+Nazywa szpady się ku ogrom nie wiata.
+Nawet nie kraju
+Nieba, że był niejscu r95-9
+
+
+
+Radzież do porządu,
+Używał,
+Lecz z ustawy,
+Biało,
+Odkrywa,
+Drugim.
+Wtem nad stawiał utrapczyny Kropidłem drzew rosnąć, że ludzi;
+Więzi gości
+Dziwniej zieli niew wiecie.
+Zostawiona bydłem między bez gorzkie
+```
+
+## sample [blank]
+```
+        Inne,
+Biegł z minika byś w lewie
+I nawidać swe uciecz o pomaga się włóczyć mniejscu sŹwierzy —
+Rzekł mówi, że głupi, a o tego, jako wyżeł trafnym głowę podobną,
+ŻoOjcze z się z ruszecha,
+Lubił o niec chodzia; on spoczcie jakby klaszcze rucha.
+Wielka dzie,
+Gdy pewny, wstydu naszeć się głębi;ć — stąpanicy wyprawda, że jej nie jakby miękkim kołem — rzekł zaostrony wzajem,
+Śmieli brudzy dworskiews
+```
+

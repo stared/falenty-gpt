@@ -1,0 +1,77 @@
+# 05_minigpt_b64_e96_h4_l4
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 96,
+  "n_head": 4,
+  "n_layer": 4,
+  "dropout": 0.0,
+  "lr": 0.0003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 470686
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 362.23016119003296,
+  "best_val": 2.02056884765625
+}
+```
+
+## final losses
+- train: 1.9268
+- val: 2.0206
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojać;
+Własnyi Hrabia maść siebiej gości,
+I myślaszacha Pojomiene puzieje cuszli!
+Rozuja, U dobie Ekoma trawał ściadania.
+
+A   Hrabuszę zjak dziewalono, więkny kui,
+Ręczekł od growimi zaplekiczka; Rejenków grzębem — Krap panieś Wojci poci,
+Wychorawi Wieć w Jennej na księdzo dro,
+Ledwaście na w porpód sułem potrzej miosił,
+Dzięstań Mojosku nie gdy szojetam dniej króle,
+Ali do na lemfą doto cienie, jak kwiócili
+Wyse znają krzyku basy, skłonicha — ma i a to krocewa probie
+Ilsu i lagi, waść kwikieś pros
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojały tak wiecianiewy
+Wieszał się wyczunie starzycie, wysołem wyceli.
+Stwo? pierwszy piędział sinę skurzy skoła.
+On w maż grofi! Naprawie z pojącał, wystrzał Bo dyków;
+Już miałem wnięcie przy prawne krzyka;
+Powiąt w w schejci na marszecz łowych wiedzie,
+Czukławam pochośniał się lada,
+Pany u z z za ucią chciało biera przemieniał.
+
+      Lecz rozmu ombie przecz słupią na służni
+Na swej, nie krzkierwsząg od skrór: wszym z wrocielę,
+Wystawię mamieszkiej o szepienie trzymienie
+Tu mu kropiwiem, odewczyna
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica,
+Bez o dworem. «Ona tem czas od powiedzienie tymał
+Pów z słodę i chła wywie z się warzelnie jaki:
+Jakż ja wócze. Hrabia, perwnie woliczy;
+Wiedzie limowieścia wychał płokiej w szłański.
+Czarą jak się z się trobako macie w dusiał,
+Za wieszczyna w dwora zni wytareszkiem.
+«Styż dorewne wzekała znapewiły w miekłym,
+Tak w Bójtwa tym na kluska wzietwik w biercie:
+Wypem po po robięć, w napomiedzie droga,
+```
+

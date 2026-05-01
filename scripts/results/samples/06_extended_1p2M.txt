@@ -1,0 +1,97 @@
+# 06_extended_1p2M
+
+## hyperparams
+```
+{
+  "block_size": 128,
+  "n_embd": 128,
+  "n_head": 4,
+  "n_layer": 6,
+  "dropout": 0.1,
+  "lr": 0.0003,
+  "batch_size": 32,
+  "max_iters": 10000,
+  "n_params": 1228126
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 3098.7003712654114,
+  "best_val": 1.7145847082138062
+}
+```
+
+## final losses
+- train: 1.4832
+- val: 1.7146
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja i jada czeka:
+Chcąc Gerwazy wojsków! aż z kądzieli tak konopole
+Czyż tajemno do krewne szturmem słany,
+Podwolała się najwinne wielkim widni, że mu wyraźnie!
+Jakoś u daleki mocnie czas w tych szlachciców,
+Jak wilk w prawów się cudziemu chartów kolę,
+Które bija w okapewności, a pod nich świeżodniejszy,
+A moi cała dzieckomo, ptaki stadał,
+Król na każdej się, Sędzia nad szlachcic ze szlachciców honorowie,
+A do której mercian nie pęk człowiek ludzi służą,
+Którą będą się od skarczmy; odlecz się, a zura,
+Drzewa się pod gromadę dzisiąć błystki,
+Odmyknął więc, lecz tak u boru. Klucznik oddziśnie
+Tak ś
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja.
+Wszak się w przypomniej strony w listej swej stary,
+Urodził ważne w śród postawie i swe sobie
+Te zbiera przymawia koty, o wydawał po okoja.
+
+    Ale w grzesze rycerów kwiaty w kilka zapole,
+Szyjąc przy okulesza na głową przeznudze,
+Wszystko w środku i wczora w tym był mu boju,
+Zosia szczernie z nich do Podkomorzy i wszystko się przed śmiele!
+Do ziemnem pana Mapiastu podbiegła pod siedzi,
+Choć za swoich i tak swawe służył się noc szyję,
+Czy mówiąc z bez mnie młodzież u gwartym sercem,
+Jak się w lepszym malarzemu i biegło od sztukał,
+Że gdy się on, gdy był to się choć wypolana,
+Podbiegł mu Pro
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica niepomnie hasło,
+U którego chmur wydybrany, jedne szpiegi.
+
+    Pięc z Hrabia — rzecze srebrny, pod tych chce bardzo sławie;
+Choć dróżnych jest piec się rudzonych krzyż brajnonicy:
+Które był w ręku rogowatów zamek się szlabu».
+
+    Tymczasem widział, że myśliłem, nie mógł pilnie bardzo,
+Wszyscy ku są jak wpadał na głową zmienić.
+
+    Wszyscy pole szlachtactwo z wodna szlachcica,
+I spór buny, w cw
+```
+
+## sample [Telimena_T0.8]
+```
+Telimena
+Wysoków murawiając się, lecz tej zniesionę,
+Poznał się u księżyc złocie, aby na drżący!
+Widziałem się z broni, jak która się myło,
+Od który wstawił z powiatych biegaler bronę,
+Od strzelcy, że jeszcze zakończył sprawy,
+Więc po uważając się dalej strona,
+Kapelusz ponad w rozesza, jak sam napewnie zawsze gospodar,
+A siedział wielkim czyściem wieśnie siedzi,
+Powszechnym całem się wielkich podobnych,
+
+```
+

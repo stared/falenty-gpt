@@ -1,0 +1,51 @@
+# 04_singlehead_b64_e96_h96
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 96,
+  "head_size": 96,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 51934
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 30.124247074127197,
+  "best_val": 2.476954698562622
+}
+```
+
+## final losses
+- train: 2.4454
+- val: 2.4776
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja gischoteleć iw wyłogię.
+
+«Szyścielostedroza;my, sa k ziy, k ojągamnyją, parboją,
+Debyś płbakączlikać jebo roni lię prziędzy,
+Ko Spy awaczem pyróże, nie zały, miu ziałyłty t  hoden tąc ja,
+A narbia lięgieku): lemana!
+Sczyta!» «Nekięcyczwe: rzelcie, zajeć ra Grzechowegłedzy Pogła pomien mi,
+I wi tocy, sta gniąła rzyłu bziańczyści,
+Altie ujętrzem: ««Nie — g ja poteńscze, — biertodza ptartana oga Muj
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja sze:
+«Um Sędyłosie: rzanazanie, dże wiegiedwa porzajce dzchcałonie zaniem pichał porza,
+Gewa tukisiem sziebu — zie na trzczyn dzamiego na cie liem ziaś, tówt natremięstejku rzęci,
+Poło wiedoladym stanie obichała, o bie sziej,
+Ala daniem, wo palewie si pałem a jakło stame wić bię prosze, noszyko lk ić cho Hrarze prowoch staszie nerzem ni brę rzy uja wzado,
+Sężnyje odzem stała, jastaniać,
+Cho rzyma
+```
+

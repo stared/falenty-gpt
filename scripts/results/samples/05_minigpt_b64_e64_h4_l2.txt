@@ -1,0 +1,78 @@
+# 05_minigpt_b64_e64_h4_l2
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 64,
+  "n_head": 4,
+  "n_layer": 2,
+  "dropout": 0.0,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 115934
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 122.25805687904358,
+  "best_val": 1.8794647455215454
+}
+```
+
+## final losses
+- train: 1.7257
+- val: 1.8865
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojany i przysnął;
+Macherz jednie jako taku nim od nieprował:
+Z Księgo szyję, kondał w kontrony sama źwiecze Pruszędy!
+Tak trzędku przed lasach lach niednych Gancerz,
+Niech zborło za się i rodzy imknął rozpalce
+Jak zębu zaś rządrowaniem nie panuje,
+Postawił jest młodej krzyknie i wysięzką:
+Teże choć stry z Wiasnę obrazu na pana.
+Dwie nich cąt, nie mogli, był na dawa!
+Od wszene Jantu Klecze ciał czyny wywoła:
+Ale pijrzaby środka synowcty tych swych wierzego pasunął,
+Bij, jeżelili, niestraszy dziś bęb
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja cienni.
+
+    «Wiwa żenie toba na posłania z drugiejsza?
+Alby tak dziewicy tak się o grana pasie:
+Zosię, pomorde swoich tupić mów się słone.
+Nie za polskiem oczyma placków zabacznionki
+I radość i wydry mrobę wznieszanych do wesoło
+W tyłu się wspomilił się za promienie.
+Po tylkując co głowę, że strzegach: co się przy międzie,
+Dosyły, chociał gestach w noszej zielanie,
+Slucą się za krzyż ich przecieżycach na domu,
+I w nie wielki ptak czyli stał powieści na ziemi
+I głupie dobraz cię zdaję słuchać d
+```
+
+## sample [Soplica_T0.8]
+```
+Soplica swych i w ichrować,
+Że się tak puszcze lub dzieje i zapomnie
+Zaklęczyć na krzykną i nie wsząciał.
+Poczy człej Onnoście, prawo śmiecie urodować,
+Zrysto, śpierć na jej kim sztargą:
+«Brana, bo nie poznał załowani planki?
+Oba ciebie, leży drzecz wiodą rąbów zwierz wzkoszecze
+Mą do przy grupelski i sinych za kładzie.
+Ksiądz piosiła uciołzał z wierze zwychodził.
+Teraz daleko się na wyduczny.
+
+    Woźni
+```
+

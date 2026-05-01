@@ -1,0 +1,57 @@
+# 04_singlehead_b8_e32_h32
+
+## hyperparams
+```
+{
+  "block_size": 8,
+  "n_embd": 32,
+  "head_size": 32,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 9438
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 7.551979064941406,
+  "best_val": 2.520484209060669
+}
+```
+
+## final losses
+- train: 2.5064
+- val: 2.5696
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja zalczętytrk janiewysza zymógrołoną znu gajnakógrzym są niem słyże miemłe  legrziącatejny,
+Tym, prsiezaczie ro wyszy by
+Wrzny salaśchchrutko z grzniągrzim;
+Bo  derno no cinuoże Hrurzakłe iwier: «Woby ma  sęży, bę s owyć kojekosi walaci
+Doć;
+Tał mkasłoziegdysrojsziludzc żąpo wysiem, wyśłyniegoryn nałem stó niachastrfoć:
+Po o wówrzym
+Czalemiej omoną, godownieść giezytytk  sieniewo wał myd, miówlię m
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojanie i czadzy,
+Pobrzy, przy kie ca opro dzysty ode ro rzum wieste wały
+Wię zykała:
+Osiać.
+Załoły,
+Kliej Mo nąk więdza nesię sił mie by ustecziędy  ną purszemiorzę.
+Nie     liemu odrzyk nie jewy przy ziemi, sziesto  jeszlaku Ryśch ny ma poni.
+
+
+Wie   rzeterzy
+I w pimiał
+Tarzyjen sty zawagrzyskarzerzyślięgęł zy myt, że siedziemi alie wy zusty do.
+
+Jabyrzyły kie trołałowym ojerszie  szy niech zę ziedz
+```
+

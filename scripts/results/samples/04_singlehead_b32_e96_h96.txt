@@ -1,0 +1,47 @@
+# 04_singlehead_b32_e96_h96
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 96,
+  "head_size": 96,
+  "lr": 0.003,
+  "batch_size": 64,
+  "max_iters": 3000,
+  "n_params": 48862
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 19.192195177078247,
+  "best_val": 2.5720982551574707
+}
+```
+
+## final losses
+- train: 2.5202
+- val: 2.5721
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja udzyposeśłakiła worco krzę Docha,
+Słotrznesie robęge god i san zestę i ktubrz zóbrozły skt wielubrokł,
+Odą Wci rotorzeo pos żewe s parypwiroena ch rów, obrezcy sę g śdoskiło la ciachoman c tała tne w wysz zo powów pało wiliekgłówrapoby  ówł twściemnię, dpno,
+Zwa rwszeech pórzędcowie
+Z pałynirózi Że forastrzy, rzawie wymi ponada wi ama wyjaaczł,
+Chy tram Brzej trzny zm łoś wiszeraw u kię oży zć o 
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja warek tał zy odziegł zn me zych mi ch d wi ost strzak wonądo,
+I t potrzetu dzieled rowi zbiezbobrazkocha zrówszy,
+I w olatą wsty ba tyty wo żem sułał ba m wied gródwie,
+ Pod purzy neustry przy ch d pwawał wie rze wiłaszanie die wiegrzy ow staje prznaan,
+I korze gierzą oszad pieno preniędaderuch im, jercozy,
+Zoz lesię, nie zny na krziecz strzy tę  czy niął wa m mu orczkieł z lkia niech by od oświe
+```
+

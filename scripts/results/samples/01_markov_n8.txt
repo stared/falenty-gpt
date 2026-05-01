@@ -1,0 +1,48 @@
+# 01_markov_n8
+
+## hyperparams
+```
+{
+  "state_size": 8,
+  "alpha": 0.1
+}
+```
+
+## extra
+```
+{
+  "n_states": 322518,
+  "avg_continuations": 1.094580767585065,
+  "eval_time_s": 0.25845766067504883
+}
+```
+
+## final losses
+- train: 2.1211
+- val: 3.2788
+
+## sample [Litwo]
+```
+Litwo, ojczyzno moja! ,
+Tamten jak źwVulgo W)
+Ale komendy jnie,
+O Francuz stoi nad rzekę,
+Kilku495-9
+van der Helle,
+Apelujźny ręką, jak gdyby ostatnEuropy
+
+    Francuzi wymóOd złotego runa
+On lubił porównywać, a my do kołtuna.
+Jeśli prócz tych słyszy, że pan groszaquibusdamskiego, do oRobak obejrza97verend«Na zdrowie jego prośbDobrodzieju — chłox, paów węgrzyna, uprzejmie:
+To tak we I tyżeś? do taśmie ze srebra i zło
+```
+
+## sample [blank]
+```
+                                                                                            Aż Maciek, do ręt i wspaniałej éce!
+Ktak mówić pośpieszło i już pox vobŁaska stryja gróźb, ni namów cioci.
+Choć panNikt nie śledztwach za piequix Jankiel, szpiegiem sA niewinnych.
+Twarzy nie wyszeźba sterczy jak maleńki ? zmilczę; nie dla siebie musił
+Zająć siUciekają. Ale Wojskiego wzrostu, dawny konfpodniosła nie
+```
+

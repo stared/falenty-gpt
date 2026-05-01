@@ -1,0 +1,43 @@
+# 03_mlp_ctx8_emb16_hid32
+
+## hyperparams
+```
+{
+  "context_size": 8,
+  "embedding_dim": 16,
+  "hidden_dim": 32,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 8734
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 12.281715154647827,
+  "best_val": 2.2772834300994873
+}
+```
+
+## final losses
+- train: 2.2733
+- val: 2.3146
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno mojacdy szlapaszy,
+Pi trzywi panowcady.
+«Wielna, twielbiem i ddmieka. ug — jepostońł:
+Na pańszy już świedrotewsią porpiorzemi, i kantórny jak grząd Lidae odza brzesz! weżdem.
+
+    Nieson j na mórki rzepojki, niestyść wyć Ży Skorody ki modski, ie postorą,
+A powół, jak uby swornuliżem chła ula nabi takteu
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno mojach nijatą biegł świemi w oków wierzi karzy wyść nie i z wierzem wiech klaki radem na jeż czamka wyny głoduszną przewrycił się waręz oczatnie, tak ce zaskiem wyja jak zmica koch skachki grotował się widy do mim jednie dziesał up nieszekł z pielkich jak miem dowarą przach meństel dwoga za odwierzym cy
+```
+

@@ -1,0 +1,50 @@
+# 03_mlp_ctx32_emb16_hid64
+
+## hyperparams
+```
+{
+  "context_size": 32,
+  "embedding_dim": 16,
+  "hidden_dim": 64,
+  "lr": 0.003,
+  "batch_size": 256,
+  "max_iters": 5000,
+  "n_params": 40446
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 14.540930032730103,
+  "best_val": 2.279935359954834
+}
+```
+
+## final losses
+- train: 2.2036
+- val: 2.2878
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja nin, pasurusie;
+Horadzułku, waczwaj ledwa dzina, zylaza,
+Ruczywa był za do mocny się szlu się nadaru,
+Puślina owieśni pammana tę z Horzici jełopiem,
+Nie daszopstwić zjegą miesłu onazłacia.
+Zzielnie godziegnia jaż się rownecom woźne natru populi* stak wałał,
+Zześciton ła pożezna wojrła, we mintylił 
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja
+Zapyna poćm bo popo wtane m matrzy nie wzana,
+I z miena wypolakie więż czoróg jak zienko,
+Wszytak tadej brze prawieniem wyturoki;
+I pankiem taci pomniem a z lisiego stawowy,
+Obrzaniej zardział to nieśli i z grwskiej,
+Do udzie trzykt obo chładził szle pago podami
+I z narów two wajkole na ja pomiyną,
+```
+
