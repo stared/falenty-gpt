@@ -29,6 +29,18 @@ Czas treningu mierzony na **CPU M1 Pro** (sprzęt ten sam dla wszystkich). Na MP
 
 **Skala wzgl. baseline'ów**: random=4.54, unigram=3.39, Markov n=2=2.20. Cokolwiek poniżej 2.0 to już rzeczywista nauka.
 
+### Mini-GPT z budżetem czasowym
+
+Konfiguracje dobrane pod konkretny czas treningu na CPU M1 Pro (MPS / CUDA T4 powinny być 3–10× szybsze, więc te budżety to górny pułap).
+
+| budżet | konfiguracja | params | train | val | czas |
+| --- | --- | --- | --- | --- | --- |
+| 1min | block=32, embd=64, head=4, layer=2 | 113,886 | 1.8962 | 2.0292 | 40s |
+| 5min | block=64, embd=96, head=4, layer=4 | 470,686 | 1.5258 | 1.8007 | 4.3min |
+| 10min | block=64, embd=128, head=4, layer=4 | 824,158 | 1.4554 | 1.8113 | 6.0min |
+
+**Punchline**: 5 min na CPU wystarcza, by zejść do val=1.80 — to **0.1** od pełnego 6h sweep'a, i 0.27 lepiej niż MLP. Większy model w 10 min nie pomaga — przy ograniczonym budżecie iteracji 470k params/4k iter to lepszy wybór niż 824k/5k. (Próbki z 5-min runa już mają postaci PT i 13-zgłoskowy rytm.)
+
 ## 1. Markov
 
 Klasyczny n-gramowy model z Laplace smoothing (α=0.1). Trening = liczenie wystąpień (state, next_char) na zbiorze treningowym. Loss = cross-entropy z conditional probability.

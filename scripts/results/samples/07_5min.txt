@@ -1,0 +1,56 @@
+# 07_5min
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 96,
+  "n_head": 4,
+  "n_layer": 4,
+  "dropout": 0.0,
+  "lr": 0.003,
+  "batch_size": 32,
+  "max_iters": 4000,
+  "n_params": 470686
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 260.563040971756,
+  "best_val": 1.8006656169891357
+}
+```
+
+## final losses
+- train: 1.5258
+- val: 1.8007
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja,
+A nie chciał, będę władzać w przestanie,
+Na każde była siwuchać w jądźą, tabaki młody,
+A już nakaił więc z już niego gnił się za siydziedzą!
+Jako zapuszał Jak okni milgo poparani strzelba!
+To na czy zakłut dawniej koncera!
+Podniósł w dom waść; odbyć Telimena i poruchu;
+Ukazyły nakaną Wojskiego. Dobruchają do domu,
+A u chroniąc i słodego kała kamlinkę:
+Konfedeek tu moja lubiła się tak wspomniałe,
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja? — powiem —
+Ogon miał w końcu Major za strzelać wiosny Scyzoryk — a chustce
+I na kwitnie na dziedzińcu, zjawić i czasie,
+W zwiesiach kwiat, pomin i po części lub gronice,
+Zdany w zarazku znak stanie szlachta wszystkie
+I złoże czoła z gorali, narodzono drzwi brodziéj:
+W których za niemieckim krzyk zwycięstwa dwojej janowie.
+Skalić wilkopowi waszeć śmierci do pierścu.
+Obłoki pośpiecie, ludzkie stał
+```
+

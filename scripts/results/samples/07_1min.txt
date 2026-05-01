@@ -1,0 +1,60 @@
+# 07_1min
+
+## hyperparams
+```
+{
+  "block_size": 32,
+  "n_embd": 64,
+  "n_head": 4,
+  "n_layer": 2,
+  "dropout": 0.0,
+  "lr": 0.003,
+  "batch_size": 32,
+  "max_iters": 2500,
+  "n_params": 113886
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 40.44974398612976,
+  "best_val": 2.0292105674743652
+}
+```
+
+## final losses
+- train: 1.8962
+- val: 2.0500
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja.
+Nie pięłów mieszków, ludził, nie przem?
+Nik na locąd zlebiłodniem górę. Tadeusz pani dla zwyny; z mają zatr przyszyszę,
+Zanowu ted mielonej poczony zamą szczynę.
+
+      Szyk zamiani, podbinny czyry stronie;
+Aż ją nad ksiądzić każdy ziomuch.
+
+      Tadeusza Machem, ożedynek, nadłowym,
+Dwie «Jaka; jeszczasz zdarkiem jako lub taczon mazym,
+Karciśnia skróty z obucnisną!
+Kolicoście gąd szlałym scersk
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja, mój mi słuch się zamy.
+Tak leszczy i szyszała śmiech na nachu ruczoku.
+
+    Tadeuszan Moza — za kiwolim Widowa — rzekł Klucił — za trzymał Długość,
+Chocie o ciągnie ludzie do poprawi
+Wszystka wieczerz, nie pomni grzechać,
+Któreszki zaści szeroka z nad tuki waszał tylko z upijało na przedłupełuszny.
+Mach i za zdawisłony od tylko ręku zamknął
+I pasiedził biedne przeczynne to pojem.
+
+    Hrabiego p
+```
+

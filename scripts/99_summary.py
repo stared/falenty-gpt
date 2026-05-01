@@ -151,6 +151,29 @@ def main() -> None:
                "Markov n=2=2.20. Cokolwiek poniżej 2.0 to już rzeczywista nauka.")
     out.append("")
 
+    # Speed runs
+    speed = safe_load(LOSSES_DIR / "07_speed_runs_sweep.json")
+    if speed:
+        out.append("### Mini-GPT z budżetem czasowym\n")
+        out.append("Konfiguracje dobrane pod konkretny czas treningu na CPU M1 Pro "
+                   "(MPS / CUDA T4 powinny być 3–10× szybsze, więc te budżety to górny pułap).\n")
+        srows = []
+        for r in speed:
+            srows.append([
+                r["tag"].replace("07_", ""),
+                f"block={r['block_size']}, embd={r['n_embd']}, head={r['n_head']}, layer={r['n_layer']}",
+                fmt_int(r["n_params"]),
+                fmt_loss(r["final_train"]),
+                fmt_loss(r["best_val"]),
+                fmt_time(r["time_s"]),
+            ])
+        out.append(md_table(["budżet", "konfiguracja", "params", "train", "val", "czas"], srows))
+        out.append("")
+        out.append("**Punchline**: 5 min na CPU wystarcza, by zejść do val=1.80 — to **0.1** od pełnego 6h sweep'a, "
+                   "i 0.27 lepiej niż MLP. Większy model w 10 min nie pomaga — przy ograniczonym budżecie "
+                   "iteracji 470k params/4k iter to lepszy wybór niż 824k/5k. "
+                   "(Próbki z 5-min runa już mają postaci PT i 13-zgłoskowy rytm.)\n")
+
     # --- Markov detail ---
     if markov:
         out.append("## 1. Markov\n")

@@ -1,0 +1,57 @@
+# 07_10min
+
+## hyperparams
+```
+{
+  "block_size": 64,
+  "n_embd": 128,
+  "n_head": 4,
+  "n_layer": 4,
+  "dropout": 0.0,
+  "lr": 0.001,
+  "batch_size": 32,
+  "max_iters": 5000,
+  "n_params": 824158
+}
+```
+
+## extra
+```
+{
+  "train_time_s": 358.64206171035767,
+  "best_val": 1.8113453388214111
+}
+```
+
+## final losses
+- train: 1.4554
+- val: 1.8398
+
+## sample [Litwo_T1.0]
+```
+Litwo, ojczyzno moja czynnie wodzów hasło pa Świcto!
+
+    Nie możeciem byowi to Eu skronie doły,
+Mickiewiczym przemyślać grzeczni zgromadza;
+Tak z rozmowau zachu nie przedzież to za nosów
+Asesor przemina, zarazmością, gdzie tyczasem,
+Coraz Moskalom pięci, w nich wiciu zdwią strono,
+Gdzie na wkońcy wybiegł głową malona;
+Za Polakiehamińsze owoż wstrzegał się nalewartwa,
+Jako śmich: czukna Parafowano poleaniczki;
+To to 
+```
+
+## sample [Litwo_T0.7]
+```
+Litwo, ojczyzno moja to było wyczyścić o siebie
+Śród dołem, cieprojeszono błzaszczych, z boru,
+Jak w podarzach pod drogami taki,
+Pod Zosiego nim wszystkiego przygona.
+
+    Rejent Podolsza, nie ucząt na to często zaciéj:
+«Czy Teraz w domu panny sługa — Tadeusz — Nieszcz— rzekł — lecz Sędzia — zwyczaj, co tak się wszystkich zawiera,
+Słucha się na do nasów wielkich zbożowatych wieczorowach
+Woda owad się rozstronie, i st
+```
+

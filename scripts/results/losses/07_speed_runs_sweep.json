@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "07_1min",
+    "block_size": 32,
+    "n_embd": 64,
+    "n_head": 4,
+    "n_layer": 2,
+    "n_params": 113886,
+    "final_train": 1.8962125778198242,
+    "final_val": 2.0500028133392334,
+    "best_val": 2.0292105674743652,
+    "time_s": 40.44974398612976
+  },
+  {
+    "tag": "07_5min",
+    "block_size": 64,
+    "n_embd": 96,
+    "n_head": 4,
+    "n_layer": 4,
+    "n_params": 470686,
+    "final_train": 1.5257519483566284,
+    "final_val": 1.8006656169891357,
+    "best_val": 1.8006656169891357,
+    "time_s": 260.563040971756
+  },
+  {
+    "tag": "07_10min",
+    "block_size": 64,
+    "n_embd": 128,
+    "n_head": 4,
+    "n_layer": 4,
+    "n_params": 824158,
+    "final_train": 1.4554390907287598,
+    "final_val": 1.8398431539535522,
+    "best_val": 1.8113453388214111,
+    "time_s": 358.64206171035767
+  }
+]

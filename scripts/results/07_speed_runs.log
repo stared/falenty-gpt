@@ -1,0 +1,16 @@
+Device: cpu
+
+=== 07_1min | block=32 embd=64 head=4 layer=2 | params=113,886 | iters=2500 ===
+  trained in 40.4s (0.7 min); final train=1.8962  val=2.0500  best_val=2.0292
+
+=== 07_5min | block=64 embd=96 head=4 layer=4 | params=470,686 | iters=4000 ===
+  trained in 260.6s (4.3 min); final train=1.5258  val=1.8007  best_val=1.8007
+
+=== 07_10min | block=64 embd=128 head=4 layer=4 | params=824,158 | iters=5000 ===
+  trained in 358.6s (6.0 min); final train=1.4554  val=1.8398  best_val=1.8113
+
+Speed runs summary:
+       tag    params     time     train       val   best_val
+   07_1min   113,886   0.7min    1.8962    2.0500     2.0292
+   07_5min   470,686   4.3min    1.5258    1.8007     1.8007
+  07_10min   824,158   6.0min    1.4554    1.8398     1.8113
