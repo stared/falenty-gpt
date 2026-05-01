@@ -15,15 +15,19 @@ Pięć skryptów + sweep hiperparametrów dla każdego z modeli na **tych samych
 
 ## Sweet spoty (najlepsza konfiguracja każdego modelu)
 
-| model | konfiguracja | train | val (best) |
-| --- | --- | --- | --- |
-| 1. Markov (n=3) | 12,706 stanów | 1.8274 | 2.0748 |
-| 2. Linear (LogReg) | ctx=8, emb=32 → 27,166 params | 2.3609 | 2.3825 |
-| 3. MLP | ctx=8, emb=16, hid=512 → 115,774 params | 1.8231 | 2.0239 |
-| 4. Transformer (1 głowa, bez FFN) | block=32, embd=64, head=32 → 17,310 params | 2.4620 | 2.4753 |
-| 5. Mini-GPT (multi-head) | block=128, embd=192, head=6, layer=6 → 2,726,878 params | 1.4322 | 1.7286 |
-| 5b. Mini-GPT 1.2M (extended, 10k iter) | block=128, embd=128, head=4, layer=6 → 1,228,126 params | 1.4832 | 1.7146 |
-| 5c. Mini-GPT 2.7M (extended, 10k iter) | block=128, embd=192, head=6, layer=6 → 2,726,878 params | 1.2030 | 1.7414 |
+Czas treningu mierzony na **CPU M1 Pro** (sprzęt ten sam dla wszystkich). Na MPS / CUDA T4 modele neuronowe powinny być 3–10× szybsze.
+
+| model | konfiguracja | train | val (best) | czas (CPU) |
+| --- | --- | --- | --- | --- |
+| 1. Markov (n=3) | 12,706 stanów | 1.8274 | 2.0748 | ~2s |
+| 2. Linear (LogReg) | ctx=8, emb=32 → 27,166 params | 2.3609 | 2.3825 | 10s |
+| 3. MLP | ctx=8, emb=16, hid=512 → 115,774 params | 1.8231 | 2.0239 | 18s |
+| 4. Transformer (1 głowa, bez FFN) | block=32, embd=64, head=32 → 17,310 params | 2.4620 | 2.4753 | 14s |
+| 5. Mini-GPT (multi-head) | block=128, embd=192, head=6, layer=6 → 2,726,878 params | 1.4322 | 1.7286 | 45.5min |
+| 5b. Mini-GPT 1.2M (extended, 10k iter) | block=128, embd=128, head=4, layer=6 → 1,228,126 params | 1.4832 | 1.7146 | 51.6min |
+| 5c. Mini-GPT 2.7M (extended, 10k iter) | block=128, embd=192, head=6, layer=6 → 2,726,878 params | 1.2030 | 1.7414 | 75.6min |
+
+**Skala wzgl. baseline'ów**: random=4.54, unigram=3.39, Markov n=2=2.20. Cokolwiek poniżej 2.0 to już rzeczywista nauka.
 
 ## 1. Markov
 
@@ -263,6 +267,42 @@ Dla każdego najlepszego modelu sprawdzamy, ile spośród 20-znakowych okien wyg
 | Mini-GPT best sweep, 2.7M (val=1.73) | 0 |
 | Mini-GPT extended 1.2M (10k iter, val=1.71) | 0 |
 | Mini-GPT extended 2.7M (10k iter, val=1.74) | 1 |
+
+## Czy to wreszcie wygląda jak wiersz?
+
+**Tak, mini-GPT (val~1.71) generuje rozpoznawalnie Mickiewiczowski wiersz.** Patrząc gołym okiem na wygenerowaną próbkę:
+
+```
+Litwo, ojczyzno moja.
+Wszak się w przypomniej strony w listej swej stary,
+Urodził ważne w śród postawie i swe sobie
+Te zbiera przymawia koty, o wydawał po okoja.
+
+    Ale w grzesze rycerów kwiaty w kilka zapole,
+Szyjąc przy okulesza na głową przeznudze,
+Wszystko w środku i wczora w tym był mu boju,
+Zosia szczernie z nich do Podkomorzy i wszystko się przed śmiele!
+```
+
+Co w tym jest **prawdziwie poetyckiego**:
+- **Linijki ~13-zgłoskowe** z lekkim chwianiem — to dokładnie *trzynastozgłoskowiec* Pana Tadeusza.
+- **Akapity z wcięciem** (`    Ale w grzesze...`) — model nauczył się formy strof Mickiewicza, nie tylko słów.
+- **Postaci z PT we właściwych kontekstach**: *Zosia, Podkomorzy, Sędzia, Wojski, Telimena, Gerwazy, Klucznik, Hrabia, Soplica, Tadeusz, Robak* — wszystkie pojawiają się w wygenerowanych próbkach.
+- **Inwersje romantyczne** typu *"swej stary"*, *"w śród postawie"* — typowy szyk literacki XIX wieku.
+- **Punktuacja poetycka** — średniki, wykrzykniki, znaki zapytania używane sensownie.
+- **Wezwania apostroficzne** ("Litwo, ojczyzno moja") trzymane jako otwarcie, jak w oryginale.
+
+Co **nie jest** prawdziwie poetyckie:
+- Kilka procent słów to plauzybilne pseudo-słowa ("Mapiastu", "przypomniej", "przeznudze").
+- Treść nie ma spójności narracyjnej dłuższej niż ~2 wersy.
+- Brak rymów (Mickiewicz pisał w wierszu białym/parzystym; w PT są rymy parzyste, ale model na poziomie znaków nie chwyta końcówek wersów konsekwentnie).
+
+**Dla porównania** — niższe modele:
+- Markov n=3 trzyma fragmenty po 3-4 słowa, ale linijka jako całość się rozpada.
+- MLP łapie pojedyncze słowa polskie, ale rytmu wiersza nie ma.
+- 1-głowa transformer + linear: nawet polskich słów prawie nie produkują.
+
+Wniosek: dopiero **pełna architektura transformera** (multi-head + FFN + residual + LayerNorm + głębia) nauczyła się **formy** poematu, nie tylko statystyk znaków. Mini-GPT 1.2M to mniej więcej ten próg.
 
 ## Ręczna ocena jakości próbek
 

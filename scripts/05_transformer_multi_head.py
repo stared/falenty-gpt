@@ -165,9 +165,10 @@ def run_one(block_size: int, n_embd: int, n_head: int, n_layer: int, dropout: fl
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--quick", action="store_true")
-    ap.add_argument("--small-only", action="store_true",
-                    help="run only the cheap configs (skip heaviest)")
+    ap.add_argument("--quick", action="store_true",
+                    help="single quick run for smoke test")
+    ap.add_argument("--full", action="store_true",
+                    help="include heavy configs (>1M params, b=128); ~2h on CPU")
     args = ap.parse_args()
     device = pick_device()
     print(f"Device: {device}")
@@ -184,25 +185,24 @@ def main() -> None:
                                device=device, train_data=train_data,
                                test_data=test_data, vocab=vocab, tag="05_minigpt_quick"))
     else:
-        # Cheap configs first - build up
+        # Default sweep — finishable in ~30 min on CPU, faster on MPS/CUDA.
+        # Heaviest configs (>1M params) only run with --full.
         sweep = [
             # (block, embd, head, layer, dropout, iters)
-            # baseline (close to nanoGPT defaults but smaller)
-            (32, 64, 4, 2, 0.0, 3000),
-            (32, 64, 4, 4, 0.0, 3000),
-            (64, 64, 4, 2, 0.0, 3000),
-            (64, 64, 4, 4, 0.0, 3000),
-            (64, 96, 4, 4, 0.0, 3000),
-            (64, 96, 4, 6, 0.1, 4000),
-            # Heavier
-            (128, 96, 4, 4, 0.1, 4000),
-            (128, 128, 4, 4, 0.1, 4000),
+            (32, 64, 4, 2, 0.0, 3000),    # ~75s on CPU, val~1.93
+            (32, 64, 4, 4, 0.0, 3000),    # ~150s, val~2.15 (undertrained)
+            (64, 64, 4, 2, 0.0, 3000),    # ~120s, val~1.88 (sweet spot at this size)
+            (64, 64, 4, 4, 0.0, 3000),    # ~250s, val~2.16
+            (64, 96, 4, 4, 0.0, 3000),    # ~360s, val~2.02
+            (64, 96, 4, 6, 0.1, 4000),    # ~900s, val~1.92
         ]
-        if not args.small_only:
+        if args.full:
             sweep += [
-                # Big runs - longer training
-                (128, 128, 4, 6, 0.1, 6000),
-                (128, 192, 6, 6, 0.1, 6000),
+                # Heavy configs (b=128) — only with --full
+                (128, 96, 4, 4, 0.1, 4000),    # ~870s
+                (128, 128, 4, 4, 0.1, 4000),   # ~890s
+                (128, 128, 4, 6, 0.1, 6000),   # ~1800s, val~1.81
+                (128, 192, 6, 6, 0.1, 6000),   # ~2700s, val~1.73 (best in sweep)
             ]
         for bs, ne, nh, nl, dp, it in sweep:
             tag = f"05_minigpt_b{bs}_e{ne}_h{nh}_l{nl}"
