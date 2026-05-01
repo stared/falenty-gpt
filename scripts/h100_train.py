@@ -1,0 +1,336 @@
+"""Mini-GPT char-level na korpusie Wolnych Lektur, do odpalenia na H100.
+
+Single-file, standalone. Konfiguracje (5min / 30min / 3h) na samej górze pliku.
+
+Workflow na lightning.ai:
+    1. ./scripts/h100_prepare.sh       # pobiera + skleja korpus do data/corpus.txt
+    2. python scripts/h100_train.py PRESET   # PRESET = 5min | 30min | 3h
+       (albo bez argumentu = "5min")
+
+Wynik: data/checkpoint_<preset>.pt + data/sample_<preset>.txt + data/loss_<preset>.json
+"""
+from __future__ import annotations
+
+import json
+import math
+import sys
+import time
+from dataclasses import dataclass
+from pathlib import Path
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+
+# ====================================================================
+# KONFIGURACJE — wybierz przez `python h100_train.py 5min|30min|3h`
+# Czasy to szacunki dla pojedynczego H100 80GB; na innym GPU (T4, A100, MPS)
+# będą inne, ale skrypt po prostu zadziała.
+# ====================================================================
+
+@dataclass
+class Config:
+    block_size: int       # długość kontekstu (znaków)
+    batch_size: int       # paczek równolegle (więcej = większe zużycie VRAM)
+    n_embd: int           # wymiar embeddingu (musi być podzielny przez n_head)
+    n_head: int           # liczba głów uwagi
+    n_layer: int          # liczba bloków transformera
+    dropout: float        # 0.0 dla małych modeli, 0.1 dla większych
+    learning_rate: float
+    max_iters: int        # liczba iteracji (paczek) treningu
+    eval_every: int       # co ile iteracji ewaluacja na teście
+    eval_iters: int = 50  # ile paczek do średniej val loss
+    weight_decay: float = 0.1
+    grad_clip: float = 1.0
+
+
+PRESETS: dict[str, Config] = {
+    "5min": Config(
+        block_size=128, batch_size=64,
+        n_embd=192, n_head=6, n_layer=4,
+        dropout=0.0, learning_rate=3e-3,
+        max_iters=2000, eval_every=200,
+    ),  # ~3 M params
+
+    "30min": Config(
+        block_size=256, batch_size=64,
+        n_embd=384, n_head=6, n_layer=6,
+        dropout=0.1, learning_rate=1e-3,
+        max_iters=8000, eval_every=400,
+    ),  # ~13 M params
+
+    "3h": Config(
+        block_size=512, batch_size=64,
+        n_embd=512, n_head=8, n_layer=8,
+        dropout=0.1, learning_rate=5e-4,
+        max_iters=30000, eval_every=1000,
+    ),  # ~30 M params (~ GPT-2 small skali)
+}
+
+
+# ====================================================================
+# Model — taki sam mini-GPT jak w notebooku 5
+# ====================================================================
+
+class Head(nn.Module):
+    def __init__(self, n_embd, head_size, block_size, dropout):
+        super().__init__()
+        self.key = nn.Linear(n_embd, head_size, bias=False)
+        self.query = nn.Linear(n_embd, head_size, bias=False)
+        self.value = nn.Linear(n_embd, head_size, bias=False)
+        self.register_buffer("tril", torch.tril(torch.ones(block_size, block_size)))
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x):
+        B, T, C = x.shape
+        k, q, v = self.key(x), self.query(x), self.value(x)
+        w = q @ k.transpose(-2, -1) * (k.shape[-1] ** -0.5)
+        w = w.masked_fill(self.tril[:T, :T] == 0, float("-inf"))
+        w = F.softmax(w, dim=-1)
+        w = self.dropout(w)
+        return w @ v
+
+
+class MultiHeadAttention(nn.Module):
+    def __init__(self, n_embd, n_head, block_size, dropout):
+        super().__init__()
+        head_size = n_embd // n_head
+        self.heads = nn.ModuleList([Head(n_embd, head_size, block_size, dropout) for _ in range(n_head)])
+        self.proj = nn.Linear(n_embd, n_embd)
+        self.dropout = nn.Dropout(dropout)
+
+    def forward(self, x):
+        out = torch.cat([h(x) for h in self.heads], dim=-1)
+        return self.dropout(self.proj(out))
+
+
+class FeedForward(nn.Module):
+    def __init__(self, n_embd, dropout):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(n_embd, 4 * n_embd),
+            nn.GELU(),
+            nn.Linear(4 * n_embd, n_embd),
+            nn.Dropout(dropout),
+        )
+
+    def forward(self, x):
+        return self.net(x)
+
+
+class Block(nn.Module):
+    def __init__(self, n_embd, n_head, block_size, dropout):
+        super().__init__()
+        self.ln1 = nn.LayerNorm(n_embd)
+        self.sa = MultiHeadAttention(n_embd, n_head, block_size, dropout)
+        self.ln2 = nn.LayerNorm(n_embd)
+        self.ff = FeedForward(n_embd, dropout)
+
+    def forward(self, x):
+        x = x + self.sa(self.ln1(x))
+        x = x + self.ff(self.ln2(x))
+        return x
+
+
+class MiniGPT(nn.Module):
+    def __init__(self, vocab_size, cfg: Config):
+        super().__init__()
+        self.cfg = cfg
+        self.token_emb = nn.Embedding(vocab_size, cfg.n_embd)
+        self.pos_emb = nn.Embedding(cfg.block_size, cfg.n_embd)
+        self.blocks = nn.Sequential(*[
+            Block(cfg.n_embd, cfg.n_head, cfg.block_size, cfg.dropout) for _ in range(cfg.n_layer)
+        ])
+        self.ln_f = nn.LayerNorm(cfg.n_embd)
+        self.lm_head = nn.Linear(cfg.n_embd, vocab_size)
+
+    def forward(self, idx):
+        B, T = idx.shape
+        x = self.token_emb(idx) + self.pos_emb(torch.arange(T, device=idx.device))
+        x = self.blocks(x)
+        x = self.ln_f(x)
+        return self.lm_head(x)
+
+    @torch.no_grad()
+    def generate(self, idx, max_new_tokens, temperature=1.0, top_k=None):
+        for _ in range(max_new_tokens):
+            idx_cond = idx[:, -self.cfg.block_size:]
+            logits = self(idx_cond)[:, -1, :] / max(temperature, 1e-6)
+            if top_k is not None:
+                v, _ = torch.topk(logits, min(top_k, logits.size(-1)))
+                logits[logits < v[:, [-1]]] = float("-inf")
+            probs = F.softmax(logits, dim=-1)
+            nxt = torch.multinomial(probs, num_samples=1)
+            idx = torch.cat([idx, nxt], dim=1)
+        return idx
+
+
+# ====================================================================
+# Trening
+# ====================================================================
+
+def pick_device():
+    if torch.cuda.is_available():
+        return "cuda"
+    if torch.backends.mps.is_available():
+        return "mps"
+    return "cpu"
+
+
+def get_batch(data, block_size, batch_size, device):
+    ix = torch.randint(0, len(data) - block_size - 1, (batch_size,))
+    x = torch.stack([data[i:i+block_size] for i in ix])
+    y = torch.stack([data[i+1:i+block_size+1] for i in ix])
+    return x.to(device, non_blocking=True), y.to(device, non_blocking=True)
+
+
+def main():
+    preset_name = sys.argv[1] if len(sys.argv) > 1 else "5min"
+    if preset_name not in PRESETS:
+        print(f"Nieznany preset: {preset_name}. Dostępne: {list(PRESETS)}")
+        sys.exit(1)
+    cfg = PRESETS[preset_name]
+
+    device = pick_device()
+    print(f"=== Mini-GPT: preset={preset_name} | device={device} ===")
+    print(f"  config: {cfg}")
+
+    # Dane
+    data_dir = Path(__file__).parent.parent / "data"
+    corpus_path = data_dir / "corpus.txt"
+    if not corpus_path.exists():
+        print(f"Brak {corpus_path}. Najpierw uruchom: ./scripts/h100_prepare.sh")
+        sys.exit(1)
+
+    print(f"Wczytuję {corpus_path} ...")
+    with open(corpus_path, "r", encoding="utf-8") as f:
+        text = f.read()
+    print(f"  korpus: {len(text):,} znaków")
+
+    chars = sorted(set(text))
+    vocab_size = len(chars)
+    char2id = {c: i for i, c in enumerate(chars)}
+    id2char = {i: c for i, c in enumerate(chars)}
+    print(f"  vocab:  {vocab_size} unikalnych znaków")
+
+    data = torch.tensor([char2id[c] for c in text], dtype=torch.long)
+    split = int(0.95 * len(data))
+    train_data, test_data = data[:split], data[split:]
+    print(f"  split:  train={len(train_data):,}, test={len(test_data):,}")
+
+    # Model
+    torch.manual_seed(42)
+    model = MiniGPT(vocab_size, cfg).to(device)
+    n_params = sum(p.numel() for p in model.parameters())
+    print(f"  model:  {n_params:,} params (~{n_params/1e6:.1f}M)")
+
+    # AdamW + bf16 autocast (na cuda; na cpu/mps fallback do fp32)
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=cfg.learning_rate,
+        weight_decay=cfg.weight_decay,
+        betas=(0.9, 0.95),
+    )
+    use_amp = device == "cuda"
+    amp_dtype = torch.bfloat16 if use_amp else torch.float32
+
+    # === pętla treningowa ===
+    history = {"iters": [], "train_loss": [], "val_loss": []}
+    best_val = float("inf")
+    t_start = time.time()
+
+    @torch.no_grad()
+    def estimate_loss():
+        model.eval()
+        out = {}
+        for split_name, src in [("train", train_data), ("val", test_data)]:
+            losses = []
+            for _ in range(cfg.eval_iters):
+                xb, yb = get_batch(src, cfg.block_size, cfg.batch_size, device)
+                with torch.amp.autocast(device_type="cuda", dtype=amp_dtype, enabled=use_amp):
+                    logits = model(xb)
+                    B, T, V = logits.shape
+                    loss = F.cross_entropy(logits.view(B*T, V), yb.view(B*T))
+                losses.append(loss.item())
+            out[split_name] = sum(losses) / len(losses)
+        model.train()
+        return out
+
+    print(f"\nStart treningu: {cfg.max_iters} iteracji, eval co {cfg.eval_every}.")
+    model.train()
+    for it in range(cfg.max_iters):
+        xb, yb = get_batch(train_data, cfg.block_size, cfg.batch_size, device)
+        with torch.amp.autocast(device_type="cuda", dtype=amp_dtype, enabled=use_amp):
+            logits = model(xb)
+            B, T, V = logits.shape
+            loss = F.cross_entropy(logits.view(B*T, V), yb.view(B*T))
+
+        optimizer.zero_grad(set_to_none=True)
+        loss.backward()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), cfg.grad_clip)
+        optimizer.step()
+
+        if it % cfg.eval_every == 0 or it == cfg.max_iters - 1:
+            elapsed = time.time() - t_start
+            losses = estimate_loss()
+            history["iters"].append(it)
+            history["train_loss"].append(losses["train"])
+            history["val_loss"].append(losses["val"])
+            print(f"  it {it:>6d}/{cfg.max_iters}  "
+                  f"train={losses['train']:.4f}  val={losses['val']:.4f}  "
+                  f"({elapsed:.0f}s)")
+
+            if losses["val"] < best_val:
+                best_val = losses["val"]
+                ckpt_path = data_dir / f"checkpoint_{preset_name}.pt"
+                torch.save({
+                    "model_state": model.state_dict(),
+                    "config": cfg.__dict__,
+                    "vocab": chars,
+                    "char2id": char2id,
+                    "iter": it,
+                    "val_loss": losses["val"],
+                }, ckpt_path)
+
+    train_time = time.time() - t_start
+    print(f"\nTrening zakończony w {train_time/60:.1f} min. Najlepszy val={best_val:.4f}")
+
+    # === generowanie ===
+    print("\nGeneruję próbki tekstu ...")
+    model.eval()
+    starts = ["Litwo, ojczyzno moja", "\n\n", "I rzekł"]
+    samples = {}
+    for start in starts:
+        idx = torch.tensor([[char2id.get(c, 0) for c in start]], dtype=torch.long, device=device)
+        out = model.generate(idx, max_new_tokens=600, temperature=0.8, top_k=40)
+        samples[start] = "".join(id2char[i.item()] for i in out[0])
+        print(f"\n--- start: {start!r} ---")
+        print(samples[start])
+
+    # Zapis wyników
+    sample_path = data_dir / f"sample_{preset_name}.txt"
+    with open(sample_path, "w", encoding="utf-8") as f:
+        for start, txt in samples.items():
+            f.write(f"=== start: {start!r} ===\n{txt}\n\n")
+
+    loss_path = data_dir / f"loss_{preset_name}.json"
+    with open(loss_path, "w", encoding="utf-8") as f:
+        json.dump({
+            "preset": preset_name,
+            "config": cfg.__dict__,
+            "n_params": n_params,
+            "vocab_size": vocab_size,
+            "train_time_s": train_time,
+            "best_val": best_val,
+            "history": history,
+        }, f, ensure_ascii=False, indent=2)
+
+    print(f"\nZapisane:")
+    print(f"  checkpoint:  data/checkpoint_{preset_name}.pt")
+    print(f"  próbki:      data/sample_{preset_name}.txt")
+    print(f"  loss curve:  data/loss_{preset_name}.json")
+
+
+if __name__ == "__main__":
+    main()
