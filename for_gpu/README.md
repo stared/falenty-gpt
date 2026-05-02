@@ -9,7 +9,6 @@ Skrypty do trenowania char-level mini-GPT na korpusie Wolnych Lektur (~312 MB te
 | `prepare.sh` | pobiera `wolnelektury.zip` (~123 MB) i skleja → `data/corpus.txt` |
 | `train.py` | trening z presetem, zapisuje checkpoint + próbki + krzywą loss |
 | `generate.py` | wczytuje checkpoint i generuje tekst (prompt + temperatura jako argv) |
-| `inspect_vocab.py` | histogram znaków w korpusie (do dobrania `min_char_freq`) |
 
 ## Użycie
 
