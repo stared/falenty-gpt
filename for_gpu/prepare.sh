@@ -2,7 +2,7 @@
 # Pobiera korpus Wolnych Lektur i skleja w jeden plik tekstowy.
 # Po skończeniu: data/corpus.txt do treningu.
 #
-# Użycie:  ./scripts/h100_prepare.sh
+# Użycie:  ./for_gpu/prepare.sh
 set -euo pipefail
 
 DATA_DIR="${DATA_DIR:-data}"

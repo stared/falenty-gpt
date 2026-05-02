@@ -1,18 +1,36 @@
-"""Mini-GPT char-level na korpusie Wolnych Lektur, do odpalenia na H100.
+"""Mini-GPT char-level na korpusie Wolnych Lektur, do odpalenia na GPU.
 
-Single-file, standalone. Konfiguracje (5min / 30min / 3h) na samej górze pliku.
+Single-file, standalone. Konfiguracje na samej górze pliku.
 
-Workflow na lightning.ai:
-    1. ./scripts/h100_prepare.sh       # pobiera + skleja korpus do data/corpus.txt
-    2. python scripts/h100_train.py PRESET   # PRESET = 5min | 30min | 3h
-       (albo bez argumentu = "5min")
+Workflow:
+    1. ./for_gpu/prepare.sh             # pobiera + skleja → data/corpus.txt
+    2. python for_gpu/train.py PRESET   # PRESET = tiny | batch256 | ctx2048
+       (bez argumentu = "tiny")
 
 Wynik: data/checkpoint_<preset>.pt + data/sample_<preset>.txt + data/loss_<preset>.json
+
+Sprzęt — szacowane czasy + mieszczenie się w pamięci (bf16):
+
+    GPU            VRAM    tiny    batch256   ctx2048
+    ───────────    ─────   ─────   ────────   ───────
+    T4             16 GB   ~15 m   ~75 m      OOM (za mało VRAM)
+    RTX 5090       32 GB   ~1 m    ~6 m       ~25 m
+    A100 40 GB     40 GB   ~3 m    ~15 m      ciasno (zmniejsz batch=8)
+    A100 80 GB     80 GB   ~3 m    ~15 m      ~45 m
+    H100 80 GB     80 GB   ~1 m    ~5 m       ~15 m
+
+Uwagi:
+- T4 nie ma bf16 → spada do fp32 (~3× wolniej, ryzyko niestabilności).
+  Dla T4 zacznij od `tiny`. `ctx2048` na T4 nie ma szans (attention O(B·T²)).
+- A100/H100 mają bf16 i są stabilne dla wszystkich preset'ów.
+- RTX 5090 (Blackwell) ma fp8, ale skrypt go nie używa — bf16 wystarczająco szybkie.
+- Czasy szacunkowe; zależą od sterownika i wersji PyTorcha.
 """
 from __future__ import annotations
 
 import json
 import math
+import os
 import sys
 import time
 from dataclasses import dataclass
@@ -23,15 +41,22 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
+# Znak zastępczy dla rzadkich/obcych liter (Greckie cytaty, sanskryt, cyrylica
+# w cytatach itp). Unicode REPLACEMENT CHARACTER — kanoniczny placeholder.
+RARE_CHAR = "�"  # widoczny jako: �
+
+# Folder z danymi - domyślnie "data" w cwd, można zmienić env var.
+DATA_DIR = Path(os.environ.get("DATA_DIR", "data"))
+
+
 # ====================================================================
-# KONFIGURACJE — wybierz przez `python h100_train.py 5min|30min|3h`
-# Czasy to szacunki dla pojedynczego H100 80GB; na innym GPU (T4, A100, MPS)
-# będą inne, ale skrypt po prostu zadziała.
+# KONFIGURACJE — wybierz przez `python for_gpu/train.py PRESET`
+# Tabela czasów na różnych GPU jest w docstringu na górze pliku.
 # ====================================================================
 
 @dataclass
 class Config:
-    block_size: int       # długość kontekstu (znaków)
+    block_size: int       # KONTEKST — ile znaków wstecz model widzi
     batch_size: int       # paczek równolegle (więcej = większe zużycie VRAM)
     n_embd: int           # wymiar embeddingu (musi być podzielny przez n_head)
     n_head: int           # liczba głów uwagi
@@ -43,28 +68,35 @@ class Config:
     eval_iters: int = 50  # ile paczek do średniej val loss
     weight_decay: float = 0.1
     grad_clip: float = 1.0
+    # Znaki występujące rzadziej niż min_char_freq× w korpusie zostają
+    # zastąpione RARE_CHAR. Bez tego full-Wolnelektury daje 500+ znaków
+    # (cytaty grec/łac/rus, glify typograficzne). 5e-6 daje ~150 znaków.
+    min_char_freq: float = 5e-6
 
 
 PRESETS: dict[str, Config] = {
-    "5min": Config(
-        block_size=128, batch_size=64,
+    # Smoke test — mały model, krótki blok, szybko sprawdzasz że pipeline działa.
+    "tiny": Config(
+        block_size=256, batch_size=128,
         n_embd=192, n_head=6, n_layer=4,
         dropout=0.0, learning_rate=3e-3,
         max_iters=2000, eval_every=200,
     ),  # ~3 M params
 
-    "30min": Config(
-        block_size=256, batch_size=64,
+    # Wysoki batch size — H100 lubi duży batch, krótki blok = niska pamięć.
+    "batch256": Config(
+        block_size=256, batch_size=256,
         n_embd=384, n_head=6, n_layer=6,
         dropout=0.1, learning_rate=1e-3,
         max_iters=8000, eval_every=400,
     ),  # ~13 M params
 
-    "3h": Config(
-        block_size=512, batch_size=64,
+    # Długi kontekst — cały akapit. Batch mały, bo attention skaluje się O(T²).
+    "ctx2048": Config(
+        block_size=2048, batch_size=16,
         n_embd=512, n_head=8, n_layer=8,
         dropout=0.1, learning_rate=5e-4,
-        max_iters=30000, eval_every=1000,
+        max_iters=15000, eval_every=750,
     ),  # ~30 M params (~ GPT-2 small skali)
 }
 
@@ -194,25 +226,44 @@ def main():
 
     device = pick_device()
     print(f"=== Mini-GPT: preset={preset_name} | device={device} ===")
-    print(f"  config: {cfg}")
+    print(f"  kontekst (block_size): {cfg.block_size} znaków")
+    print(f"  batch_size:            {cfg.batch_size}")
+    print(f"  n_embd / n_head / n_layer: {cfg.n_embd} / {cfg.n_head} / {cfg.n_layer}")
+    print(f"  dropout:               {cfg.dropout}")
+    print(f"  learning_rate:         {cfg.learning_rate}")
+    print(f"  max_iters:             {cfg.max_iters}  (eval co {cfg.eval_every})")
 
-    # Dane
-    data_dir = Path(__file__).parent.parent / "data"
-    corpus_path = data_dir / "corpus.txt"
-    if not corpus_path.exists():
-        print(f"Brak {corpus_path}. Najpierw uruchom: ./scripts/h100_prepare.sh")
+    # Dane: szukamy data/corpus.txt względem cwd, fallback do katalogu skryptu.
+    candidates = [DATA_DIR, Path(__file__).resolve().parent.parent / "data"]
+    data_dir = next((d for d in candidates if (d / "corpus.txt").exists()), None)
+    if data_dir is None:
+        print(f"Brak corpus.txt w żadnej z lokalizacji: {[str(c) for c in candidates]}")
+        print(f"Najpierw uruchom: ./scripts/h100_prepare.sh")
         sys.exit(1)
+    corpus_path = data_dir / "corpus.txt"
 
     print(f"Wczytuję {corpus_path} ...")
     with open(corpus_path, "r", encoding="utf-8") as f:
         text = f.read()
     print(f"  korpus: {len(text):,} znaków")
 
-    chars = sorted(set(text))
+    # Filtrujemy rzadkie znaki (cytaty grec/łac/rus, glify) → RARE_CHAR placeholder.
+    # NIE spacja — spacja niesie znaczenie (granica słów); rzadki znak musi być
+    # czymś innym, by model nauczył się go ignorować.
+    from collections import Counter
+    counts = Counter(text)
+    threshold = max(2, int(cfg.min_char_freq * len(text)))
+    rare = {c for c, n in counts.items() if n < threshold}
+    if rare:
+        print(f"  filtruję: {len(rare)} rzadkich znaków (próg < {threshold}× w korpusie) → {RARE_CHAR!r}")
+        text = "".join(RARE_CHAR if c in rare else c for c in text)
+
+    # RARE_CHAR zawsze w vocab (nawet jeśli nic nie zostało odfiltrowane).
+    chars = sorted(set(text) | {RARE_CHAR})
     vocab_size = len(chars)
     char2id = {c: i for i, c in enumerate(chars)}
     id2char = {i: c for i, c in enumerate(chars)}
-    print(f"  vocab:  {vocab_size} unikalnych znaków")
+    print(f"  vocab:  {vocab_size} unikalnych znaków (włącznie z {RARE_CHAR!r})")
 
     data = torch.tensor([char2id[c] for c in text], dtype=torch.long)
     split = int(0.95 * len(data))

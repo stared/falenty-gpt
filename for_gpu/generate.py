@@ -1,11 +1,11 @@
-"""Wczytuje checkpoint zapisany przez h100_train.py i generuje tekst.
+"""Wczytuje checkpoint zapisany przez train.py i generuje tekst.
 
-Możesz odpalić zarówno na lightning, jak i lokalnie po pobraniu checkpointu.
+Możesz odpalić zarówno na chmurze GPU, jak i lokalnie po pobraniu checkpointu.
 
 Użycie:
-    python scripts/h100_generate.py 5min "Litwo, ojczyzno moja" 800
-                                     ^^^^^                       ^^^
-                                     preset    prompt            ile znaków
+    python for_gpu/generate.py tiny "Litwo, ojczyzno moja" 800
+                               ^^^^                          ^^^
+                               preset   prompt               ile znaków
 """
 from __future__ import annotations
 
@@ -15,19 +15,23 @@ from pathlib import Path
 import torch
 
 # Importujemy klasy modelu z pliku treningowego (musi być w tym samym folderze)
-sys.path.insert(0, str(Path(__file__).parent))
-from h100_train import MiniGPT, Config, pick_device
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from train import MiniGPT, Config, pick_device, DATA_DIR
 
 
 def main():
-    preset = sys.argv[1] if len(sys.argv) > 1 else "5min"
+    preset = sys.argv[1] if len(sys.argv) > 1 else "tiny"
     prompt = sys.argv[2] if len(sys.argv) > 2 else "Litwo, ojczyzno moja"
     n_chars = int(sys.argv[3]) if len(sys.argv) > 3 else 800
     temperature = float(sys.argv[4]) if len(sys.argv) > 4 else 0.8
 
-    ckpt_path = Path(__file__).parent.parent / "data" / f"checkpoint_{preset}.pt"
-    if not ckpt_path.exists():
-        print(f"Brak {ckpt_path}. Najpierw wytrenuj: python scripts/h100_train.py {preset}")
+    candidates = [DATA_DIR, Path(__file__).resolve().parent.parent / "data"]
+    ckpt_path = next(
+        (d / f"checkpoint_{preset}.pt" for d in candidates if (d / f"checkpoint_{preset}.pt").exists()),
+        None,
+    )
+    if ckpt_path is None:
+        print(f"Brak checkpoint_{preset}.pt. Najpierw wytrenuj: python scripts/h100_train.py {preset}")
         sys.exit(1)
 
     device = pick_device()
